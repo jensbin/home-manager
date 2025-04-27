@@ -9270,18 +9270,39 @@ absolute path</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-i18n.inputMethod.enable"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.enable"><code class="option">i18n.inputMethod.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable an additional input method type.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code> if the deprecated option <code class="literal">enabled</code> is set, false otherwise</p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/default.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/default.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-i18n.inputMethod.enabled"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.enabled"><code class="option">i18n.inputMethod.enabled</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>Select the enabled input method. Input methods are software to input
-symbols that are not available on standard input devices.</p><p>Input methods are especially used to input Chinese, Japanese and
-Korean characters.</p><p>Currently the following input methods are available in Home Manager:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="literal">fcitx5</code></span></dt><dd><p>A customizable lightweight input method.
-The next generation of fcitx.
-Addons (including engines, dictionaries, skins) can be added using
-<a class="xref" href="options.xhtml#opt-i18n.inputMethod.fcitx5.addons"  ><code class="option">i18n.inputMethod.fcitx5.addons</code></a>.</p></dd><dt><span class="term"><code class="literal">nabi</code></span></dt><dd><p>A Korean input method based on XIM. Nabi doesn’t support Qt 5.</p></dd><dt><span class="term"><code class="literal">uim</code></span></dt><dd><p>The “universal input method” is a library with an XIM bridge.
-uim mainly supports Chinese, Japanese and Korean.</p></dd><dt><span class="term"><code class="literal">hime</code></span></dt><dd><p>An extremely easy-to-use input method framework.</p></dd><dt><span class="term"><code class="literal">kime</code></span></dt><dd><p>A Korean IME.</p></dd></dl></div>
+<p>Deprecated - use <code class="literal">type</code> and <code class="literal">enable = true</code> instead</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or one of “fcitx”, “fcitx5”, “nabi”, “uim”, “hime”, “kime”</p>
@@ -9357,6 +9378,348 @@ package</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.ignoreUserConfig"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.ignoreUserConfig"><code class="option">i18n.inputMethod.fcitx5.ignoreUserConfig</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Ignore the user configures. <span class="strong"><strong>Warning</strong></span>: When this is enabled, the
+user config files are totally ignored and the user dict can’t be saved
+and loaded.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.quickPhrase"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.quickPhrase"><code class="option">i18n.inputMethod.fcitx5.quickPhrase</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Quick phrases.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  smile = &quot;（・∀・）&quot;;
+  angry = &quot;(￣ー￣)&quot;;
+}
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.quickPhraseFiles"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.quickPhraseFiles"><code class="option">i18n.inputMethod.fcitx5.quickPhraseFiles</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Quick phrase files.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of absolute path</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  words = ./words.mb;
+  numbers = ./numbers.mb;
+}
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.settings.addons"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.settings.addons"><code class="option">i18n.inputMethod.fcitx5.settings.addons</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The addon configures in <code class="literal">conf</code> folder in ini format with global sections.
+Each item is written to the corresponding file.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  classicui.globalSection.Theme = &quot;example&quot;;
+  pinyin.globalSection.EmojiEnabled = &quot;True&quot;;
+}
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.settings.addons._name_.globalSection"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.settings.addons._name_.globalSection"><code class="option">i18n.inputMethod.fcitx5.settings.addons.&lt;name&gt;.globalSection</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>global section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.settings.addons._name_.sections"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.settings.addons._name_.sections"><code class="option">i18n.inputMethod.fcitx5.settings.addons.&lt;name&gt;.sections</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.settings.globalOptions"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.settings.globalOptions"><code class="option">i18n.inputMethod.fcitx5.settings.globalOptions</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The global options in <code class="literal">config</code> file in ini format.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  Behavior = {
+    ActiveByDefault = false;
+  };
+  Hotkey = {
+    EnumerateWithTriggerKeys = true;
+    EnumerateSkipFirst = false;
+    ModifierOnlyKeyTimeout = 250;
+  };
+}
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.settings.inputMethod"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.settings.inputMethod"><code class="option">i18n.inputMethod.fcitx5.settings.inputMethod</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The input method configure in <code class="literal">profile</code> file in ini format.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  GroupOrder.&quot;0&quot; = &quot;Default&quot;;
+  &quot;Groups/0&quot; = {
+    Name = &quot;Default&quot;;
+    &quot;Default Layout&quot; = &quot;us&quot;;
+    DefaultIM = &quot;pinyin&quot;;
+  };
+  &quot;Groups/0/Items/0&quot;.Name = &quot;keyboard-us&quot;;
+  &quot;Groups/0/Items/1&quot;.Name = &quot;pinyin&quot;;
+}
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.themes"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.themes"><code class="option">i18n.inputMethod.fcitx5.themes</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Themes to be written to <code class="filename">$XDG_DATA_HOME/fcitx5/themes/${name}</code></p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+lazy attribute set of (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.themes._name_.highlightImage"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.themes._name_.highlightImage"><code class="option">i18n.inputMethod.fcitx5.themes.&lt;name&gt;.highlightImage</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Path to the SVG of the highlight.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or absolute path</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.themes._name_.panelImage"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.themes._name_.panelImage"><code class="option">i18n.inputMethod.fcitx5.themes.&lt;name&gt;.panelImage</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Path to the SVG of the panel.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or absolute path</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.fcitx5.themes._name_.theme"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.themes._name_.theme"><code class="option">i18n.inputMethod.fcitx5.themes.&lt;name&gt;.theme</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The <code class="literal">theme.conf</code> file of the theme.</p><p>See https://fcitx-im.org/wiki/Fcitx_5_Theme#Background_images
+for more information.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))) or strings concatenated with “\n” or absolute path</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/fcitx5.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-i18n.inputMethod.fcitx5.waylandFrontend"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.fcitx5.waylandFrontend"><code class="option">i18n.inputMethod.fcitx5.waylandFrontend</code>
   </a>
  </span>
@@ -9412,6 +9775,39 @@ engine:
 <tr><td>
 <code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/kime.nix" target="_top">
 &lt;home-manager/modules/i18n/input-method/kime.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-i18n.inputMethod.type"></a><a class="term" href="options.xhtml#opt-i18n.inputMethod.type"><code class="option">i18n.inputMethod.type</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Select the enabled input method. Input methods are software to input
+symbols that are not available on standard input devices.</p><p>Input methods are especially used to input Chinese, Japanese and
+Korean characters.</p><p>Currently the following input methods are available in Home Manager:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="literal">fcitx5</code></span></dt><dd><p>A customizable lightweight input method.
+The next generation of fcitx.
+Addons (including engines, dictionaries, skins) can be added using
+<a class="xref" href="options.xhtml#opt-i18n.inputMethod.fcitx5.addons"  ><code class="option">i18n.inputMethod.fcitx5.addons</code></a>.</p></dd><dt><span class="term"><code class="literal">nabi</code></span></dt><dd><p>A Korean input method based on XIM. Nabi doesn’t support Qt 5.</p></dd><dt><span class="term"><code class="literal">uim</code></span></dt><dd><p>The “universal input method” is a library with an XIM bridge.
+uim mainly supports Chinese, Japanese and Korean.</p></dd><dt><span class="term"><code class="literal">hime</code></span></dt><dd><p>An extremely easy-to-use input method framework.</p></dd><dt><span class="term"><code class="literal">kime</code></span></dt><dd><p>A Korean IME.</p></dd></dl></div>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “fcitx”, “fcitx5”, “nabi”, “uim”, “hime”, “kime”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+The value of the deprecated option <code class="literal">enabled</code>, defaulting to null</p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;fcitx5&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/default.nix" target="_top">
+&lt;home-manager/modules/i18n/input-method/default.nix&gt;
 </a></code>
 </td></tr>
 </table>
@@ -23600,14 +23996,13 @@ attribute set of (Firefox preference (int, bool, string, and also attrs, list, f
  </span>
 </dt>
 <dd>
-<p>Custom Firefox user chrome CSS.</p><p>This can be a path to a file or directory in the Nix store,
-or a derivation, or a verbatim multi-line string.</p>
+<p>Custom Firefox user chrome CSS.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or strings concatenated with “\n” or absolute path</p>
+strings concatenated with “\n” or absolute path</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">null</code></p>
+<code class="literal">&quot;&quot;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">&#x27;&#x27;
   /* Hide tab bar in FF Quantum */
@@ -25204,14 +25599,13 @@ attribute set of (Floorp preference (int, bool, string, and also attrs, list, fl
  </span>
 </dt>
 <dd>
-<p>Custom Floorp user chrome CSS.</p><p>This can be a path to a file or directory in the Nix store,
-or a derivation, or a verbatim multi-line string.</p>
+<p>Custom Floorp user chrome CSS.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or strings concatenated with “\n” or absolute path</p>
+strings concatenated with “\n” or absolute path</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">null</code></p>
+<code class="literal">&quot;&quot;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">&#x27;&#x27;
   /* Hide tab bar in FF Quantum */
@@ -45685,6 +46079,97 @@ null or string</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.onedrive.enable"></a><a class="term" href="options.xhtml#opt-programs.onedrive.enable"><code class="option">programs.onedrive.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable onedrive.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/onedrive.nix" target="_top">
+&lt;home-manager/modules/programs/onedrive.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.onedrive.package"></a><a class="term" href="options.xhtml#opt-programs.onedrive.package"><code class="option">programs.onedrive.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The onedrive package to use.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.onedrive</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/onedrive.nix" target="_top">
+&lt;home-manager/modules/programs/onedrive.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.onedrive.settings"></a><a class="term" href="options.xhtml#opt-programs.onedrive.settings"><code class="option">programs.onedrive.settings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Configuration settings for Onedrive. All available options can be
+found at <a class="link" href="https://github.com/abraunegg/onedrive/blob/master/config"  target="_top">https://github.com/abraunegg/onedrive/blob/master/config</a>.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">&#x27;&#x27;
+  {
+    check_nomount = &quot;false&quot;;
+    check_nosync = &quot;false&quot;;
+    classify_as_big_delete = &quot;1000&quot;;
+    cleanup_local_files = &quot;false&quot;;
+    disable_notifications = &quot;false&quot;;
+    no_remote_delete = &quot;false&quot;;
+    rate_limit = &quot;0&quot;;
+    resync = &quot;false&quot;;
+    skip_dotfiles = &quot;false&quot;;
+  }
+&#x27;&#x27;
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/onedrive.nix" target="_top">
+&lt;home-manager/modules/programs/onedrive.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.onlyoffice.enable"></a><a class="term" href="options.xhtml#opt-programs.onlyoffice.enable"><code class="option">programs.onlyoffice.enable</code>
   </a>
  </span>
@@ -58353,6 +58838,30 @@ package</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.thefuck.alias"></a><a class="term" href="options.xhtml#opt-programs.thefuck.alias"><code class="option">programs.thefuck.alias</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Alias used to invoke <code class="literal">thefuck</code>.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;fuck&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/thefuck.nix" target="_top">
+&lt;home-manager/modules/programs/thefuck.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.thunderbird.enable"></a><a class="term" href="options.xhtml#opt-programs.thunderbird.enable"><code class="option">programs.thunderbird.enable</code>
   </a>
  </span>
@@ -63138,10 +63647,8 @@ how to configure.</p>
 <p><span class="emphasis"><em>Type:</em></span>
 strings concatenated with “\n”</p>
 
-<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">&#x27;&#x27;
-  return {}
-&#x27;&#x27;
-</code></pre>
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;&quot;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">-- Your lua code / config here
 local mylib = require &#x27;mylib&#x27;;
@@ -66451,7 +66958,7 @@ The default of <code class="literal">^[[A</code> may correspond to the UP key �
  </span>
 </dt>
 <dd>
-<p>Content to be added to <code class="filename">.zshrc</code>. To specify the order, use <code class="literal">lib.mkOrder</code>.</p>
+<p>Content to be added to <code class="filename">.zshrc</code>.</p><p>To specify the order, use <code class="literal">lib.mkOrder</code>.</p><p>Common order values:</p><div class="itemizedlist"><ul class="itemizedlist " style="list-style-type: disc;"><li class="listitem"><p>500 (mkBefore): Early initialization (replaces initExtraFirst)</p></li><li class="listitem"><p>550: Before completion initialization (replaces initExtraBeforeCompInit)</p></li><li class="listitem"><p>1000 (default): General configuration (replaces initExtra)</p></li><li class="listitem"><p>1500 (mkAfter): Last to run configuration</p></li></ul></div>
 
 <p><span class="emphasis"><em>Type:</em></span>
 strings concatenated with “\n”</p>
@@ -66459,83 +66966,11 @@ strings concatenated with “\n”</p>
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">&quot;&quot;</code></p>
 
-<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">lib.mkOrder 1000 &#x27;&#x27;&#x27;
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">lib.mkOrder 1200 &#x27;&#x27;&#x27;
   echo &quot;Hello zsh initContent!&quot;
 &#x27;&#x27;&#x27;;
 
 </code></pre>
-
-<p><span class="emphasis"><em>Declared by:</em></span></p>
-<table border="0" summary="Simple list" class="simplelist">
-<tr><td>
-<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix" target="_top">
-&lt;home-manager/modules/programs/zsh.nix&gt;
-</a></code>
-</td></tr>
-</table>
-</dd>
-<dt>
- <span class="term">
- <a id="opt-programs.zsh.initExtra"></a><a class="term" href="options.xhtml#opt-programs.zsh.initExtra"><code class="option">programs.zsh.initExtra</code>
-  </a>
- </span>
-</dt>
-<dd>
-<p>Extra commands that should be added to <code class="filename">.zshrc</code>.</p>
-
-<p><span class="emphasis"><em>Type:</em></span>
-strings concatenated with “\n”</p>
-
-<p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;&quot;</code></p>
-
-<p><span class="emphasis"><em>Declared by:</em></span></p>
-<table border="0" summary="Simple list" class="simplelist">
-<tr><td>
-<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix" target="_top">
-&lt;home-manager/modules/programs/zsh.nix&gt;
-</a></code>
-</td></tr>
-</table>
-</dd>
-<dt>
- <span class="term">
- <a id="opt-programs.zsh.initExtraBeforeCompInit"></a><a class="term" href="options.xhtml#opt-programs.zsh.initExtraBeforeCompInit"><code class="option">programs.zsh.initExtraBeforeCompInit</code>
-  </a>
- </span>
-</dt>
-<dd>
-<p>Extra commands that should be added to <code class="filename">.zshrc</code> before compinit.</p>
-
-<p><span class="emphasis"><em>Type:</em></span>
-strings concatenated with “\n”</p>
-
-<p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;&quot;</code></p>
-
-<p><span class="emphasis"><em>Declared by:</em></span></p>
-<table border="0" summary="Simple list" class="simplelist">
-<tr><td>
-<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix" target="_top">
-&lt;home-manager/modules/programs/zsh.nix&gt;
-</a></code>
-</td></tr>
-</table>
-</dd>
-<dt>
- <span class="term">
- <a id="opt-programs.zsh.initExtraFirst"></a><a class="term" href="options.xhtml#opt-programs.zsh.initExtraFirst"><code class="option">programs.zsh.initExtraFirst</code>
-  </a>
- </span>
-</dt>
-<dd>
-<p>Commands that should be added to top of <code class="filename">.zshrc</code>.</p>
-
-<p><span class="emphasis"><em>Type:</em></span>
-strings concatenated with “\n”</p>
-
-<p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;&quot;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -76875,7 +77310,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation kdeconnect-kde-24.12.3&gt;</code></p>
+<code class="literal">&lt;derivation kdeconnect-kde-25.04.0&gt;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">pkgs.plasma5Packages.kdeconnect-kde</code></p>
