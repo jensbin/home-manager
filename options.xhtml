@@ -40333,7 +40333,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation lutris-0.5.19&gt;</code></p>
+<code class="literal">pkgs.lutris</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -47049,6 +47049,962 @@ list of package</p>
 <tr><td>
 <code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obs-studio.nix" target="_top">
 &lt;home-manager/modules/programs/obs-studio.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.enable"></a><a class="term" href="options.xhtml#opt-programs.obsidian.enable"><code class="option">programs.obsidian.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable obsidian.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.package"></a><a class="term" href="options.xhtml#opt-programs.obsidian.package"><code class="option">programs.obsidian.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The obsidian package to use.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.obsidian</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.defaultSettings.app"></a><a class="term" href="options.xhtml#opt-programs.obsidian.defaultSettings.app"><code class="option">programs.obsidian.defaultSettings.app</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings to write to <code class="literal">app.json</code>.</p><p>Vault-specific settings take priority and will override these, if set.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+raw value</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.defaultSettings.appearance"></a><a class="term" href="options.xhtml#opt-programs.obsidian.defaultSettings.appearance"><code class="option">programs.obsidian.defaultSettings.appearance</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings to write to <code class="literal">appearance.json</code>.</p><p>Vault-specific settings take priority and will override these, if set.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+raw value</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.defaultSettings.communityPlugins"></a><a class="term" href="options.xhtml#opt-programs.obsidian.defaultSettings.communityPlugins"><code class="option">programs.obsidian.defaultSettings.communityPlugins</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<pre><code class="programlisting">      Community plugins to install and activate.
+
+      Vault-specific settings take priority and will override these, if set.
+</code></pre>
+
+<p><span class="emphasis"><em>Type:</em></span>
+raw value</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">[ ]</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.defaultSettings.corePlugins"></a><a class="term" href="options.xhtml#opt-programs.obsidian.defaultSettings.corePlugins"><code class="option">programs.obsidian.defaultSettings.corePlugins</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Core plugins to activate.</p><p>Vault-specific settings take priority and will override these, if set.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+raw value</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
+  &quot;backlink&quot;
+  &quot;bookmarks&quot;
+  &quot;canvas&quot;
+  &quot;command-palette&quot;
+  &quot;daily-notes&quot;
+  &quot;editor-status&quot;
+  &quot;file-explorer&quot;
+  &quot;file-recovery&quot;
+  &quot;global-search&quot;
+  &quot;graph&quot;
+  &quot;note-composer&quot;
+  &quot;outgoing-link&quot;
+  &quot;outline&quot;
+  &quot;page-preview&quot;
+  &quot;switcher&quot;
+  &quot;tag-pane&quot;
+  &quot;templates&quot;
+  &quot;word-count&quot;
+]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.defaultSettings.cssSnippets"></a><a class="term" href="options.xhtml#opt-programs.obsidian.defaultSettings.cssSnippets"><code class="option">programs.obsidian.defaultSettings.cssSnippets</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<pre><code class="programlisting">      CSS snippets to install.
+
+      Vault-specific settings take priority and will override these, if set.
+</code></pre>
+
+<p><span class="emphasis"><em>Type:</em></span>
+raw value</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">[ ]</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.defaultSettings.extraFiles"></a><a class="term" href="options.xhtml#opt-programs.obsidian.defaultSettings.extraFiles"><code class="option">programs.obsidian.defaultSettings.extraFiles</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<pre><code class="programlisting">      Extra files to link to the vault directory.
+
+      Vault-specific settings take priority and will override these, if set.
+</code></pre>
+
+<p><span class="emphasis"><em>Type:</em></span>
+raw value</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.defaultSettings.hotkeys"></a><a class="term" href="options.xhtml#opt-programs.obsidian.defaultSettings.hotkeys"><code class="option">programs.obsidian.defaultSettings.hotkeys</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<pre><code class="programlisting">      Hotkeys to configure.
+
+      Vault-specific settings take priority and will override these, if set.
+</code></pre>
+
+<p><span class="emphasis"><em>Type:</em></span>
+raw value</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.defaultSettings.themes"></a><a class="term" href="options.xhtml#opt-programs.obsidian.defaultSettings.themes"><code class="option">programs.obsidian.defaultSettings.themes</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<pre><code class="programlisting">      Themes to install.
+
+      Vault-specific settings take priority and will override these, if set.
+</code></pre>
+
+<p><span class="emphasis"><em>Type:</em></span>
+raw value</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">[ ]</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults"><code class="option">programs.obsidian.vaults</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of vaults to create.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.enable"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.enable"><code class="option">programs.obsidian.vaults.&lt;name&gt;.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether this vault should be generated.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.app"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.app"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.app</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings to write to app.json.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of anything</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.appearance"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.appearance"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.appearance</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings to write to appearance.json.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of anything</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.communityPlugins"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.communityPlugins"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.communityPlugins</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Community plugins to install and activate.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of ((submodule) or package convertible to it)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">[ ]</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.communityPlugins._.enable"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.communityPlugins._.enable"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.communityPlugins.*.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable the plugin.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.communityPlugins._.pkg"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.communityPlugins._.pkg"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.communityPlugins.*.pkg</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The plugin package.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+package</p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.communityPlugins._.settings"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.communityPlugins._.settings"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.communityPlugins.*.settings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings to include in the plugin’s <code class="literal">data.json</code>.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of anything</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.corePlugins"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.corePlugins"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.corePlugins</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Core plugins to activate.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of ((submodule) or (one of “audio-recorder”, “backlink”, “bookmarks”, “canvas”, “command-palette”, “daily-notes”, “editor-status”, “file-explorer”, “file-recovery”, “global-search”, “graph”, “markdown-importer”, “note-composer”, “outgoing-link”, “outline”, “page-preview”, “properties”, “publish”, “random-note”, “slash-command”, “slides”, “switcher”, “sync”, “tag-pane”, “templates”, “word-count”, “workspaces”, “zk-prefixer”) convertible to it)</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
+  &quot;backlink&quot;
+  &quot;bookmarks&quot;
+  &quot;canvas&quot;
+  &quot;command-palette&quot;
+  &quot;daily-notes&quot;
+  &quot;editor-status&quot;
+  &quot;file-explorer&quot;
+  &quot;file-recovery&quot;
+  &quot;global-search&quot;
+  &quot;graph&quot;
+  &quot;note-composer&quot;
+  &quot;outgoing-link&quot;
+  &quot;outline&quot;
+  &quot;page-preview&quot;
+  &quot;switcher&quot;
+  &quot;tag-pane&quot;
+  &quot;templates&quot;
+  &quot;word-count&quot;
+]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.corePlugins._.enable"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.corePlugins._.enable"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.corePlugins.*.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable the plugin.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.corePlugins._.name"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.corePlugins._.name"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.corePlugins.*.name</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The plugin.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+one of “audio-recorder”, “backlink”, “bookmarks”, “canvas”, “command-palette”, “daily-notes”, “editor-status”, “file-explorer”, “file-recovery”, “global-search”, “graph”, “markdown-importer”, “note-composer”, “outgoing-link”, “outline”, “page-preview”, “properties”, “publish”, “random-note”, “slash-command”, “slides”, “switcher”, “sync”, “tag-pane”, “templates”, “word-count”, “workspaces”, “zk-prefixer”</p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.corePlugins._.settings"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.corePlugins._.settings"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.corePlugins.*.settings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Plugin settings to include.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of anything</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.cssSnippets"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.cssSnippets"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.cssSnippets</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>CSS snippets to install.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of ((submodule) or absolute path convertible to it)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">[ ]</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.cssSnippets._.enable"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.cssSnippets._.enable"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.cssSnippets.*.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable the snippet.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.cssSnippets._.name"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.cssSnippets._.name"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.cssSnippets.*.name</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Name of the snippet.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">lib.strings.removeSuffix &quot;.css&quot; (builtins.baseNameOf source)</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.cssSnippets._.source"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.cssSnippets._.source"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.cssSnippets.*.source</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Path of the source file.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or absolute path</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.cssSnippets._.text"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.cssSnippets._.text"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.cssSnippets.*.text</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Text of the file.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.extraFiles"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.extraFiles"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.extraFiles</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Extra files to link to the vault directory.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.extraFiles._name_.source"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.extraFiles._name_.source"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.extraFiles.&lt;name&gt;.source</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Path of the source file or directory.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or absolute path</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.extraFiles._name_.target"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.extraFiles._name_.target"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.extraFiles.&lt;name&gt;.target</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Path to target relative to the vault’s directory.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">name</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.extraFiles._name_.text"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.extraFiles._name_.text"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.extraFiles.&lt;name&gt;.text</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Text of the file.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.hotkeys"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.hotkeys"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.hotkeys</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Hotkeys to configure.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of list of (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.hotkeys._name_._.key"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.hotkeys._name_._.key"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.hotkeys.&lt;name&gt;.*.key</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The hotkey.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.hotkeys._name_._.modifiers"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.hotkeys._name_._.modifiers"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.hotkeys.&lt;name&gt;.*.modifiers</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The hotkey modifiers.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">[ ]</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.themes"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.themes"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.themes</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Themes to install.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of ((submodule) or package convertible to it)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">[ ]</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.themes._.enable"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.themes._.enable"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.themes.*.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to set the theme as active.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.settings.themes._.pkg"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.settings.themes._.pkg"><code class="option">programs.obsidian.vaults.&lt;name&gt;.settings.themes.*.pkg</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The theme package.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+package</p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.vaults._name_.target"></a><a class="term" href="options.xhtml#opt-programs.obsidian.vaults._name_.target"><code class="option">programs.obsidian.vaults.&lt;name&gt;.target</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Path to target vault relative to the user’s <code class="envar">HOME</code>.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">name</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
 </a></code>
 </td></tr>
 </table>
@@ -55264,6 +56220,357 @@ attribute set of string</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.sketchybar.enable"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.enable"><code class="option">programs.sketchybar.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable sketchybar.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.package"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.package"><code class="option">programs.sketchybar.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The sketchybar package to use.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.sketchybar</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.config"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.config"><code class="option">programs.sketchybar.config</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The sketchybar configuration. Can be specified as:</p><div class="orderedlist"><ol class="orderedlist "  type="1"><li class="listitem"><p>A string containing the configuration content directly</p></li><li class="listitem"><p>An attribute set with ‘source’ pointing to a directory containing
+the full configuration, and optionally ‘recursive = true’ to
+recursively copy all files</p></li><li class="listitem"><p>An attribute set with ‘text’ containing inline configuration</p></li></ol></div><p>When using a string or ‘text’, the appropriate shebang will be
+automatically added based on configType (bash or lua).</p><p>When using a directory source, it should contain a file named
+“sketchybarrc” which serves as the main entry point.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or strings concatenated with “\n” or (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting"># String example - inline configuration
+&#x27;&#x27;
+# Define colors
+export COLOR_BLACK=&quot;0xff181926&quot;
+export COLOR_WHITE=&quot;0xffcad3f5&quot;
+
+# Configure bar
+sketchybar --bar height=32 \
+                position=top \
+                padding_left=10 \
+                padding_right=10 \
+                color=$COLOR_BLACK
+
+# Configure default values
+sketchybar --default icon.font=&quot;SF Pro:Bold:14.0&quot; \
+                    icon.color=$COLOR_WHITE \
+                    label.font=&quot;SF Pro:Bold:14.0&quot; \
+                    label.color=$COLOR_WHITE
+
+# Add items to the bar
+sketchybar --add item clock right \
+          --set clock script=&quot;date &#x27;+%H:%M&#x27;&quot; \
+                      update_freq=10
+
+# Update the bar
+sketchybar --update
+&#x27;&#x27;
+
+# Or directory example - for complex configurations
+# {
+#   source = ./path/to/sketchybar-config;
+#   recursive = true;
+# }
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.configType"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.configType"><code class="option">programs.sketchybar.configType</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The type of configuration to generate.</p><p>Set to “bash” to use the standard bash configuration.
+Set to “lua” to use the Lua configuration via SbarLua.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+one of “bash”, “lua”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;bash&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.extraLuaPackages"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.extraLuaPackages"><code class="option">programs.sketchybar.extraLuaPackages</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The extra Lua packages required for your plugins to work.
+This option accepts a function that takes a Lua package set as an argument,
+and selects the required Lua packages from this package set.
+See the example for more info.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+function that evaluates to a(n) list of package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">ps: [ ]</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">luaPkgs: with luaPkgs; [ luautf8 ]</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.extraPackages"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.extraPackages"><code class="option">programs.sketchybar.extraPackages</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Extra packages to add to PATH for the sketchybar service.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">[ ]</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">[ pkgs.jq ]</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.includeSystemPath"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.includeSystemPath"><code class="option">programs.sketchybar.includeSystemPath</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to include common system <code class="literal">PATH</code> in the wrapper.
+This allows sketchybar to access system binaries.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.luaPackage"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.luaPackage"><code class="option">programs.sketchybar.luaPackage</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The lua5_4 package to use. Lua interpreter to use when configType is lua.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.lua5_4</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.sbarLuaPackage"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.sbarLuaPackage"><code class="option">programs.sketchybar.sbarLuaPackage</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The sbarlua package to use. Required when using a lua configuration.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.sbarlua</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.service.enable"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.service.enable"><code class="option">programs.sketchybar.service.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable sketchybar service.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.service.errorLogFile"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.service.errorLogFile"><code class="option">programs.sketchybar.service.errorLogFile</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Absolute path to log all stderr output.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or absolute path or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">${config.home.homeDirectory}/Library/Logs/sketchybar/sketchybar.err.log</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;/Users/khaneliman/Library/Logs/sketchybar.log&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.sketchybar.service.outLogFile"></a><a class="term" href="options.xhtml#opt-programs.sketchybar.service.outLogFile"><code class="option">programs.sketchybar.service.outLogFile</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Absolute path to log all stdout output.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or absolute path or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">${config.home.homeDirectory}/Library/Logs/sketchybar/sketchybar.out.log</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;/Users/khaneliman/Library/Logs/sketchybar.log&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix" target="_top">
+&lt;home-manager/modules/programs/sketchybar.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.skim.enable"></a><a class="term" href="options.xhtml#opt-programs.skim.enable"><code class="option">programs.skim.enable</code>
   </a>
  </span>
@@ -58425,6 +59732,30 @@ TOML value</p>
 ];
 
 </code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/superfile.nix" target="_top">
+&lt;home-manager/modules/programs/superfile.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.superfile.metadataPackage"></a><a class="term" href="options.xhtml#opt-programs.superfile.metadataPackage"><code class="option">programs.superfile.metadataPackage</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The exiftool package to use.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.exiftool</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -64293,7 +65624,7 @@ package <span class="emphasis"><em>(read only)</em></span></p>
  </span>
 </dt>
 <dd>
-<p>Vim package to customize</p>
+<p>The vim-full package to use. Vim package to customize</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -72535,7 +73866,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The <code class="literal">avizo</code> package to use.</p>
+<p>The avizo package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -72856,7 +74187,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing <span class="command"><strong>betterlockscreen</strong></span>.</p>
+<p>The betterlockscreen package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -73981,13 +75312,13 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>clipmenu derivation to use.</p>
+<p>The clipmenu package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;pkgs.clipmenu&quot;</code></p>
+<code class="literal">pkgs.clipmenu</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -75072,7 +76403,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing <span class="command"><strong>dunst</strong></span>.</p>
+<p>The dunst package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -75343,7 +76674,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Which dwm-status package to use.</p>
+<p>The dwm-status package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -75352,7 +76683,7 @@ package</p>
 <code class="literal">pkgs.dwm-status</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
-<code class="literal">&quot;pkgs.dwm-status.override { enableAlsaUtils = false; }&quot;</code></p>
+<code class="literal">pkgs.dwm-status.override { enableAlsaUtils = false; }</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -75458,7 +76789,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The <code class="literal">easyeffects</code> package to use.</p>
+<p>The easyeffects package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -75808,7 +77139,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Which espanso package to use</p>
+<p>The espanso package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -76036,13 +77367,13 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The etesync-dav derivation to use.</p>
+<p>The etesync-dav package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;pkgs.etesync-dav&quot;</code></p>
+<code class="literal">pkgs.etesync-dav</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -76142,7 +77473,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing <span class="command"><strong>flameshot</strong></span>.</p>
+<p>The flameshot package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -76336,7 +77667,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing <span class="command"><strong>fnott</strong></span>.</p>
+<p>The fnott package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -76485,7 +77816,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing <span class="command"><strong>fusuma</strong></span>.</p>
+<p>The fusuma package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -76990,7 +78321,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package containing the <span class="command"><strong>git-sync</strong></span> program.</p>
+<p>The git-sync package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -77967,7 +79298,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;pkgs.gromit-mpx&quot;</code></p>
+<code class="literal">pkgs.gromit-mpx</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -79137,7 +80468,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The imapnotify package to use</p>
+<p>The goimapnotify package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -79357,7 +80688,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>kanshi derivation to use.</p>
+<p>The kanshi package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -80321,13 +81652,13 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The KDE connect package to use</p>
+<p>The kdeconnect-kde package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation kdeconnect-kde-25.04.1&gt;</code></p>
+<code class="literal">pkgs.kdePackages.kdeconnect-kde</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">pkgs.plasma5Packages.kdeconnect-kde</code></p>
@@ -81339,15 +82670,12 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use for the mbsync binary.</p>
+<p>The isync package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">pkgs.isync</code></p>
-
-<p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">pkgs.isync</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -81732,13 +83060,13 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The MPD package to run.</p>
+<p>The mpd package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;pkgs.mpd&quot;</code></p>
+<code class="literal">pkgs.mpd</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -82020,7 +83348,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>mpd-discord-rpc package to use.</p>
+<p>The mpd-discord-rpc package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -82285,7 +83613,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The mpDris2 package to use.</p>
+<p>The mpdris2 package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -83118,7 +84446,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use for the nextcloud client binary.</p>
+<p>The nextcloud-client package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -83193,7 +84521,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package containing the <span class="command"><strong>notify-osd</strong></span> program.</p>
+<p>The notify-osd package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -83610,7 +84938,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing the <span class="command"><strong>pantalaimon</strong></span> executable to use.</p>
+<p>The pantalaimon package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -83702,7 +85030,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Parcellite derivation to use.</p>
+<p>The parcellite package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -84026,15 +85354,12 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Picom derivation to use.</p>
+<p>The picom package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">pkgs.picom</code></p>
-
-<p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">pkgs.picom</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -84671,7 +85996,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use for the Plex mpv shim.</p>
+<p>The plex-mpv-shim package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -87577,7 +88902,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Pulseeffects package to use.</p>
+<p>The pulseeffects-legacy package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -87789,7 +89114,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing the <span class="command"><strong>recoll</strong></span> binary.</p>
+<p>The recoll package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -89285,13 +90610,13 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing the <span class="command"><strong>xautolock</strong></span> binary.</p>
+<p>The xautolock package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation xautolock-2.2-7-ga23dd5c&gt;</code></p>
+<code class="literal">pkgs.xautolock</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -89359,13 +90684,13 @@ list of string</p>
  </span>
 </dt>
 <dd>
-<p>Package providing the <span class="command"><strong>xss-lock</strong></span> binary.</p>
+<p>The xss-lock package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation xss-lock-unstable-2018-05-31&gt;</code></p>
+<code class="literal">pkgs.xss-lock</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -89626,13 +90951,13 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>signaturepdf derivation to use.</p>
+<p>The signaturepdf package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;pkgs.signaturepdf&quot;</code></p>
+<code class="literal">pkgs.signaturepdf</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -89957,8 +91282,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The <code class="literal">spotifyd</code> package to use.
-Can be used to specify extensions.</p>
+<p>The spotifyd package to use. Can be used to specify extensions.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -90073,15 +91397,12 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use for the Stalonetray binary.</p>
+<p>The stalonetray package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">pkgs.stalonetray</code></p>
-
-<p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">pkgs.stalonetray</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -90193,15 +91514,12 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use for the status notifier watcher binary.</p>
+<p>The status-notifier-item package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">pkgs.haskellPackages.status-notifier-item</code></p>
-
-<p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">pkgs.haskellPackages.status-notifier-item</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -90852,13 +92170,13 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package containing the <span class="command"><strong>sxhkd</strong></span> executable.</p>
+<p>The sxhkd package to use. containing the sxhkd executable</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;pkgs.sxhkd&quot;</code></p>
+<code class="literal">pkgs.sxhkd</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -91935,15 +93253,12 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use for the Taffybar binary.</p>
+<p>The taffybar package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">pkgs.taffybar</code></p>
-
-<p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">pkgs.taffybar</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -92177,15 +93492,12 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use for the trayer binary.</p>
+<p>The trayer package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">pkgs.trayer</code></p>
-
-<p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">pkgs.trayer</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -92599,8 +93911,8 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Notification text’s font package. If <code class="literal">null</code> then
-the font is assumed to already be available in your profile.</p>
+<p>The font package to use. Package providing the font to use for the notification text.
+This package is only used if <code class="literal">font.package</code> is not null.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or package</p>
@@ -93325,7 +94637,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>unclutter derivation to use.</p>
+<p>The unclutter-xfixes package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -93629,15 +94941,12 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use for the vdirsyncer binary.</p>
+<p>The vdirsyncer package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;pkgs.vdirsyncer&quot;</code></p>
-
-<p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">pkgs.vdirsyncer</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -93759,7 +95068,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package containing the <span class="command"><strong>volnoti</strong></span> program.</p>
+<p>The volnoti package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -93906,6 +95215,187 @@ string</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-services.wayvnc.enable"></a><a class="term" href="options.xhtml#opt-services.wayvnc.enable"><code class="option">services.wayvnc.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable wayvnc VNC server.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix" target="_top">
+&lt;home-manager/modules/services/wayvnc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-services.wayvnc.package"></a><a class="term" href="options.xhtml#opt-services.wayvnc.package"><code class="option">services.wayvnc.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The wayvnc package to use.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.wayvnc</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix" target="_top">
+&lt;home-manager/modules/services/wayvnc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-services.wayvnc.autoStart"></a><a class="term" href="options.xhtml#opt-services.wayvnc.autoStart"><code class="option">services.wayvnc.autoStart</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable autostarting of wayvnc.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix" target="_top">
+&lt;home-manager/modules/services/wayvnc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-services.wayvnc.settings"></a><a class="term" href="options.xhtml#opt-services.wayvnc.settings"><code class="option">services.wayvnc.settings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>See CONFIGURATION section in <span class="citerefentry"><span class="refentrytitle">wayvnc</span>(1)</span>.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of (atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  address = &quot;0.0.0.0&quot;;
+  port = 5901;
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix" target="_top">
+&lt;home-manager/modules/services/wayvnc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-services.wayvnc.settings.address"></a><a class="term" href="options.xhtml#opt-services.wayvnc.settings.address"><code class="option">services.wayvnc.settings.address</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The address to which the server shall bind, e.g. 0.0.0.0 or
+localhost.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;0.0.0.0&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix" target="_top">
+&lt;home-manager/modules/services/wayvnc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-services.wayvnc.settings.port"></a><a class="term" href="options.xhtml#opt-services.wayvnc.settings.port"><code class="option">services.wayvnc.settings.port</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The port to which the server shall bind.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+16 bit unsigned integer; between 0 and 65535 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">5901</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix" target="_top">
+&lt;home-manager/modules/services/wayvnc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-services.wayvnc.systemdTarget"></a><a class="term" href="options.xhtml#opt-services.wayvnc.systemdTarget"><code class="option">services.wayvnc.systemdTarget</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Systemd target to bind to.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">config.wayland.systemd.target</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix" target="_top">
+&lt;home-manager/modules/services/wayvnc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-services.wlsunset.enable"></a><a class="term" href="options.xhtml#opt-services.wlsunset.enable"><code class="option">services.wlsunset.enable</code>
   </a>
  </span>
@@ -93938,13 +95428,13 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>wlsunset derivation to use.</p>
+<p>The wlsunset package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;pkgs.wlsunset&quot;</code></p>
+<code class="literal">pkgs.wlsunset</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -94224,7 +95714,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing <span class="command"><strong>wluma</strong></span>.</p>
+<p>The wluma package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -94670,8 +96160,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package containing the <span class="command"><strong>xembedsniproxy</strong></span>
-program.</p>
+<p>The plasma-workspace package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -94722,13 +96211,13 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use for xidlehook.</p>
+<p>The xidlehook package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;pkgs.xidlehook&quot;</code></p>
+<code class="literal">pkgs.xidlehook</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -95038,7 +96527,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Which xscreensaver package to use.</p>
+<p>The xscreensaver package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -95120,7 +96609,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package containing the <span class="command"><strong>xsettingsd</strong></span> program.</p>
+<p>The xsettingsd package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -100165,6 +101654,132 @@ boolean</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-wayland.windowManager.sway.config.bindswitches"></a><a class="term" href="options.xhtml#opt-wayland.windowManager.sway.config.bindswitches"><code class="option">wayland.windowManager.sway.config.bindswitches</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Binds &lt;switch&gt; to execute the sway command command on state changes. Supported switches are lid (laptop
+lid) and tablet (tablet mode) switches. Valid values for state are on, off and toggle. These switches are
+on when the device lid is shut and when tablet mode is active respectively. toggle is also supported to run
+a command both when the switch is toggled on or off.
+See sway(5).</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;No bindswitches by default&quot;</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">let
+  laptop = &quot;eDP-1&quot;;
+in
+{
+  &quot;lid:on&quot; = {
+    reload = true;
+    locked = true;
+    action = &quot;output ${laptop} disable&quot;;
+  };
+  &quot;lid:off&quot; = {
+    reload = true;
+    locked = true;
+    action = &quot;output ${laptop} enable&quot;;
+  };
+}
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/sway.nix" target="_top">
+&lt;home-manager/modules/services/window-managers/i3-sway/sway.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-wayland.windowManager.sway.config.bindswitches._name_.action"></a><a class="term" href="options.xhtml#opt-wayland.windowManager.sway.config.bindswitches._name_.action"><code class="option">wayland.windowManager.sway.config.bindswitches.&lt;name&gt;.action</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The sway command to execute on state changes</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/sway.nix" target="_top">
+&lt;home-manager/modules/services/window-managers/i3-sway/sway.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-wayland.windowManager.sway.config.bindswitches._name_.locked"></a><a class="term" href="options.xhtml#opt-wayland.windowManager.sway.config.bindswitches._name_.locked"><code class="option">wayland.windowManager.sway.config.bindswitches.&lt;name&gt;.locked</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Unless the flag --locked is set, the command
+will not be run when a screen locking program
+is active. If there is a matching binding with
+and without --locked, the one with will be preferred
+when locked and the one without will be
+preferred when unlocked.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/sway.nix" target="_top">
+&lt;home-manager/modules/services/window-managers/i3-sway/sway.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-wayland.windowManager.sway.config.bindswitches._name_.reload"></a><a class="term" href="options.xhtml#opt-wayland.windowManager.sway.config.bindswitches._name_.reload"><code class="option">wayland.windowManager.sway.config.bindswitches.&lt;name&gt;.reload</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>If the --reload flag is given, the binding will
+also be executed when the config is reloaded.
+toggle bindings will not be executed on reload.
+The --locked flag will operate as normal so if
+the config is reloaded while locked and
+–locked is not given, the binding will not be
+executed.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/sway.nix" target="_top">
+&lt;home-manager/modules/services/window-managers/i3-sway/sway.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-wayland.windowManager.sway.config.colors"></a><a class="term" href="options.xhtml#opt-wayland.windowManager.sway.config.colors"><code class="option">wayland.windowManager.sway.config.colors</code>
   </a>
  </span>
@@ -102484,7 +104099,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">pkgs.wf-shell</code></p>
+<code class="literal">pkgs.wayfirePlugins.wf-shell</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -104024,7 +105639,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The package to use when running update-desktop-database.</p>
+<p>The desktop-file-utils package to use. Used when running update-desktop-database.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -104048,7 +105663,7 @@ package</p>
  </span>
 </dt>
 <dd>
-<p>The package to use when running update-mime-database.</p>
+<p>The shared-mime-info package to use. Used when running update-mime-database.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -105412,7 +107027,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package to use for running the Awesome WM.</p>
+<p>The awesome package to use. to use for running the Awesome WM</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -106548,8 +108163,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing the <span class="command"><strong>herbstluftwm</strong></span> and
-<span class="command"><strong>herbstclient</strong></span> commands.</p>
+<p>The herbstluftwm package to use.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -109101,7 +110715,7 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>Package providing the <span class="command"><strong>spectrwm</strong></span> command.</p>
+<p>The spectrwm package to use. providing the spectrwm command</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
