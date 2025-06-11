@@ -20897,6 +20897,127 @@ strings concatenated with “\n”</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.codex.enable"></a><a class="term" href="options.xhtml#opt-programs.codex.enable"><code class="option">programs.codex.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable Lightweight coding agent that runs in your terminal.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix" target="_top">
+&lt;home-manager/modules/programs/codex.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.codex.package"></a><a class="term" href="options.xhtml#opt-programs.codex.package"><code class="option">programs.codex.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The codex package to use.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.codex</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix" target="_top">
+&lt;home-manager/modules/programs/codex.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.codex.custom-instructions"></a><a class="term" href="options.xhtml#opt-programs.codex.custom-instructions"><code class="option">programs.codex.custom-instructions</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Define custom guidance for the agents; this value is written to {file}~/.codex/AGENTS.md</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+strings concatenated with “\n”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;&quot;</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">&#x27;&#x27;
+  - Always respond with emojis
+  - Only use git commands when explicitly requested
+&#x27;&#x27;
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix" target="_top">
+&lt;home-manager/modules/programs/codex.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.codex.settings"></a><a class="term" href="options.xhtml#opt-programs.codex.settings"><code class="option">programs.codex.settings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Configuration written to <code class="filename">~/.codex/config.yaml</code>.
+See <a class="link" href="https://github.com/openai/codex#configuration-guide"  target="_top">https://github.com/openai/codex#configuration-guide</a> for supported values.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+YAML value</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  model = &quot;gemma3:latest&quot;;
+  provider = &quot;ollama&quot;;
+  providers = {
+    ollama = {
+      name = &quot;Ollama&quot;;
+      baseURL = &quot;http://localhost:11434/v1&quot;;
+      envKey = &quot;OLLAMA_API_KEY&quot;;
+    };
+  };
+}
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix" target="_top">
+&lt;home-manager/modules/programs/codex.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.command-not-found.enable"></a><a class="term" href="options.xhtml#opt-programs.command-not-found.enable"><code class="option">programs.command-not-found.enable</code>
   </a>
  </span>
@@ -42704,6 +42825,216 @@ attribute set of attribute set of list of string</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.mc.enable"></a><a class="term" href="options.xhtml#opt-programs.mc.enable"><code class="option">programs.mc.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable Midnight Commander.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix" target="_top">
+&lt;home-manager/modules/programs/mc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.mc.package"></a><a class="term" href="options.xhtml#opt-programs.mc.package"><code class="option">programs.mc.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The mc package to use.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.mc</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix" target="_top">
+&lt;home-manager/modules/programs/mc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.mc.extensionSettings"></a><a class="term" href="options.xhtml#opt-programs.mc.extensionSettings"><code class="option">programs.mc.extensionSettings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings for <code class="literal">mc/mc.ext.ini</code> file. This setting completely replaces the default <code class="literal">/etc/mc/mc.ext.ini</code>.</p><p>Midnight Commander does not merge this file with the system default,
+so you should copy the original if you want to preserve default behavior and add your changes there.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  EPUB = {
+    Open = &quot;fbreader %f &amp;&quot;;
+    Shell = &quot;.epub&quot;;
+  };
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix" target="_top">
+&lt;home-manager/modules/programs/mc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.mc.fileHighlightSettings"></a><a class="term" href="options.xhtml#opt-programs.mc.fileHighlightSettings"><code class="option">programs.mc.fileHighlightSettings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings for <code class="literal">mc/filehighlight.ini</code> file. This setting completely replaces the default <code class="literal">/etc/mc/filehighlight.ini</code>.</p><p>Midnight Commander does not merge this file with the system default, so you should copy the original if you want to preserve default behavior
+and add your changes there.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  lua = {
+    extensions = &quot;lua;luac&quot;;
+  };
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix" target="_top">
+&lt;home-manager/modules/programs/mc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.mc.keymapSettings"></a><a class="term" href="options.xhtml#opt-programs.mc.keymapSettings"><code class="option">programs.mc.keymapSettings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings for <code class="literal">mc/mc.keymap</code> file.</p><p>Any missing settings will fall back to the system default.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  panel = {
+    Up = &quot;up;ctrl-k&quot;;
+  };
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix" target="_top">
+&lt;home-manager/modules/programs/mc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.mc.panelsSettings"></a><a class="term" href="options.xhtml#opt-programs.mc.panelsSettings"><code class="option">programs.mc.panelsSettings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings for <code class="literal">mc/panels</code> file.</p><p>Any missing settings will fall back to the system default.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  Dirs = {
+    current_is_left = false;
+    other_dir = &quot;/home&quot;;
+  };
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix" target="_top">
+&lt;home-manager/modules/programs/mc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.mc.settings"></a><a class="term" href="options.xhtml#opt-programs.mc.settings"><code class="option">programs.mc.settings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Settings for <code class="literal">mc/ini</code> file.</p><p>Any missing settings will fall back to the system default.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  Panels = {
+    show_dot_files = false;
+  };
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix" target="_top">
+&lt;home-manager/modules/programs/mc.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.mcfly.enable"></a><a class="term" href="options.xhtml#opt-programs.mcfly.enable"><code class="option">programs.mcfly.enable</code>
   </a>
  </span>
@@ -43070,6 +43401,30 @@ package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">&lt;derivation meli-0.8.12&gt;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix" target="_top">
+&lt;home-manager/modules/programs/meli.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.meli.includes"></a><a class="term" href="options.xhtml#opt-programs.meli.includes"><code class="option">programs.meli.includes</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Paths of the various meli configuration files to include.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">[ ]</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -47361,6 +47716,136 @@ attribute set of section of an INI file (attrs of INI atom (null, bool, int, flo
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.niriswitcher.enable"></a><a class="term" href="options.xhtml#opt-programs.niriswitcher.enable"><code class="option">programs.niriswitcher.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable niriswitcher, an application switcher for niri.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/niriswitcher.nix" target="_top">
+&lt;home-manager/modules/programs/niriswitcher.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.niriswitcher.package"></a><a class="term" href="options.xhtml#opt-programs.niriswitcher.package"><code class="option">programs.niriswitcher.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The niriswitcher package to use.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.niriswitcher</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/niriswitcher.nix" target="_top">
+&lt;home-manager/modules/programs/niriswitcher.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.niriswitcher.settings"></a><a class="term" href="options.xhtml#opt-programs.niriswitcher.settings"><code class="option">programs.niriswitcher.settings</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>niriswitcher configuration.
+For available settings see <a class="link" href="https://github.com/isaksamsten/niriswitcher/?tab=readme-ov-file#options"  target="_top">https://github.com/isaksamsten/niriswitcher/?tab=readme-ov-file#options</a>.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or TOML value</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  keys = {
+    modifier = &quot;Super&quot;;
+    switch = {
+      next = &quot;Tab&quot;;
+      prev = &quot;Shift+Tab&quot;;
+    };
+  };
+  center_on_focus = true;
+  appearance = {
+    system_theme = &quot;dark&quot;;
+    icon_size = 64;
+  };
+}
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/niriswitcher.nix" target="_top">
+&lt;home-manager/modules/programs/niriswitcher.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.niriswitcher.style"></a><a class="term" href="options.xhtml#opt-programs.niriswitcher.style"><code class="option">programs.niriswitcher.style</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>CSS style of the switcher.
+<a class="link" href="https://github.com/isaksamsten/niriswitcher/?tab=readme-ov-file#themes"  target="_top">https://github.com/isaksamsten/niriswitcher/?tab=readme-ov-file#themes</a>
+for the documentation.</p><p>If the value is set to a path literal, then the path will be used as the CSS file.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or absolute path or strings concatenated with “\n”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">&#x27;&#x27;
+  .application-name {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .application.selected .application-name {
+    color: rgba(255, 255, 255, 1);
+  }
+&#x27;&#x27;
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/niriswitcher.nix" target="_top">
+&lt;home-manager/modules/programs/niriswitcher.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.nix-index.enable"></a><a class="term" href="options.xhtml#opt-programs.nix-index.enable"><code class="option">programs.nix-index.enable</code>
   </a>
  </span>
@@ -51312,6 +51797,9 @@ null or package</p>
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (submodule)</p>
 
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -51328,8 +51816,11 @@ attribute set of (submodule)</p>
  </span>
 </dt>
 <dd>
-<p>Whether this is a default library. There must be exactly one
-default library.</p>
+<p>Whether this is a default library.</p><p>For papis to function without explicit library selection
+(i.e. without <code class="literal">-l &lt;library&gt;</code> or <code class="literal">--pick-lib</code> flags) there
+must be a default library defined.</p><p>Note this can be also defined (or overridden) on a local
+<code class="literal">$(pwd)/.papis.config</code> or via python
+<code class="literal">$XDG_CONFIG_HOME/papis/config.py</code> config file.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
