@@ -10360,7 +10360,7 @@ linked to the target location. This option has no effect
 if the source is a file.</p><p>If <code class="literal">false</code> (the default) then the target
 will be a symbolic link to the source directory. If
 <code class="literal">true</code> then the target will be a
-directory structure matching the source’s but whose leafs
+directory structure matching the source’s but whose leaves
 are symbolic links to the files of the source directory.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -10946,7 +10946,7 @@ configurations are generated. If you need configurations for specific
 backends, you can toggle them via the enable option. For example,
 <a class="xref" href="options.xhtml#opt-home.pointerCursor.x11.enable"  ><code class="option">home.pointerCursor.x11.enable</code></a>
 will enable x11 cursor configurations.</p><p>Note that this will merely generate the cursor configurations.
-To apply the configurations, the relevant subsytems must also be configured.
+To apply the configurations, the relevant subsystems must also be configured.
 For example, <a class="xref" href="options.xhtml#opt-home.pointerCursor.gtk.enable"  ><code class="option">home.pointerCursor.gtk.enable</code></a> will generate
 the gtk cursor configuration, but <a class="xref" href="options.xhtml#opt-gtk.enable"  ><code class="option">gtk.enable</code></a> needs
 to be set for it to be applied.</p>
@@ -12943,7 +12943,7 @@ of conditions may be specified to selectively control whether launchd keeps a jo
 multiple keys are provided, launchd ORs them, thus providing maximum flexibility to the job to refine
 the logic and stall if necessary. If launchd finds no reason to restart the job, it falls back on
 demand based invocation.  Jobs that exit quickly and frequently when configured to be kept alive will
-be throttled to converve system resources.</p>
+be throttled to conserve system resources.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean or (submodule)</p>
@@ -14676,7 +14676,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -14687,8 +14687,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-meta.teams"></a><a class="term" href="options.xhtml#opt-meta.teams"><code class="option">meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -26908,6 +26936,55 @@ null or absolute path</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.claude-code.lspServers"></a><a class="term" href="options.xhtml#opt-programs.claude-code.lspServers"><code class="option">programs.claude-code.lspServers</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>LSP (Language Server Protocol) servers configuration.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of (JSON value)</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
+  go = {
+    args = [
+      &quot;serve&quot;
+    ];
+    command = &quot;gopls&quot;;
+    extensionToLanguage = {
+      &quot;.go&quot; = &quot;go&quot;;
+    };
+  };
+  typescript = {
+    args = [
+      &quot;--stdio&quot;
+    ];
+    command = &quot;typescript-language-server&quot;;
+    extensionToLanguage = {
+      &quot;.js&quot; = &quot;javascript&quot;;
+      &quot;.jsx&quot; = &quot;javascriptreact&quot;;
+      &quot;.ts&quot; = &quot;typescript&quot;;
+      &quot;.tsx&quot; = &quot;typescriptreact&quot;;
+    };
+  };
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/claude-code.nix" target="_top">
+&lt;home-manager/modules/programs/claude-code.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.claude-code.mcpServers"></a><a class="term" href="options.xhtml#opt-programs.claude-code.mcpServers"><code class="option">programs.claude-code.mcpServers</code>
   </a>
  </span>
@@ -31986,7 +32063,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -31997,8 +32074,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.firefox.profiles._name_.bookmarks.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.firefox.profiles._name_.bookmarks.meta.teams"><code class="option">programs.firefox.profiles.&lt;name&gt;.bookmarks.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -32602,7 +32707,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -32613,8 +32718,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.firefox.profiles._name_.handlers.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.firefox.profiles._name_.handlers.meta.teams"><code class="option">programs.firefox.profiles.&lt;name&gt;.handlers.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -33296,7 +33429,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -33307,8 +33440,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.firefox.profiles._name_.search.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.firefox.profiles._name_.search.meta.teams"><code class="option">programs.firefox.profiles.&lt;name&gt;.search.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -34036,7 +34197,32 @@ boolean</p>
 <p>Specify the bind mode that the bind is used in</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or one of “default”, “insert”, “paste”</p>
+null or one of “default”, “insert”, “paste” or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix" target="_top">
+&lt;home-manager/modules/programs/fish.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.fish.binds._name_.name"></a><a class="term" href="options.xhtml#opt-programs.fish.binds._name_.name"><code class="option">programs.fish.binds.&lt;name&gt;.name</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The key name that is used for the bind.
+If null, the attribute set key is used.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
 </code></pre>
@@ -34111,7 +34297,7 @@ boolean</p>
 <p>Change current mode after bind is executed</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or one of “default”, “insert”, “paste”</p>
+null or one of “default”, “insert”, “paste” or string</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
 </code></pre>
@@ -35231,7 +35417,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -35242,8 +35428,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.floorp.profiles._name_.bookmarks.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.floorp.profiles._name_.bookmarks.meta.teams"><code class="option">programs.floorp.profiles.&lt;name&gt;.bookmarks.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -35847,7 +36061,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -35858,8 +36072,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.floorp.profiles._name_.handlers.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.floorp.profiles._name_.handlers.meta.teams"><code class="option">programs.floorp.profiles.&lt;name&gt;.handlers.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -36541,7 +36783,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -36552,8 +36794,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.floorp.profiles._name_.search.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.floorp.profiles._name_.search.meta.teams"><code class="option">programs.floorp.profiles.&lt;name&gt;.search.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -38127,6 +38397,48 @@ null or string</p>
 </code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">&quot;gemini-2.5-flash&quot;
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/gemini-cli.nix" target="_top">
+&lt;home-manager/modules/programs/gemini-cli.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.gemini-cli.policies"></a><a class="term" href="options.xhtml#opt-programs.gemini-cli.policies"><code class="option">programs.gemini-cli.policies</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>An attribute set of policy definitions to create in <code class="literal">~/.gemini/policies/</code>.
+The attribute name becomes the filename with <code class="literal">.toml</code> extension automatically added.
+The value can be either an attribute set representing the TOML policy or a path to a TOML file.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of (absolute path or TOML value)</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
+  &quot;my-rules&quot; = {
+    rule = [
+      {
+        toolName = &quot;run_shell_command&quot;;
+        commandPrefix = &quot;git &quot;;
+        decision = &quot;ask_user&quot;;
+        priority = 100;
+      }
+    ];
+  };
+  &quot;other-rules&quot; = ./path/to/rules.toml;
+}
+
 </code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -53115,7 +53427,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -53126,8 +53438,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.librewolf.profiles._name_.bookmarks.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.librewolf.profiles._name_.bookmarks.meta.teams"><code class="option">programs.librewolf.profiles.&lt;name&gt;.bookmarks.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -53731,7 +54071,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -53742,8 +54082,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.librewolf.profiles._name_.handlers.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.librewolf.profiles._name_.handlers.meta.teams"><code class="option">programs.librewolf.profiles.&lt;name&gt;.handlers.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -54425,7 +54793,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -54436,8 +54804,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.librewolf.profiles._name_.search.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.librewolf.profiles._name_.search.meta.teams"><code class="option">programs.librewolf.profiles.&lt;name&gt;.search.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -55221,7 +55617,7 @@ attribute set of (submodule)</p>
 <dd>
 <p>The package to use for this runner, nix will try to find the executable for this package.
 A more specific path can be set by using settings.runner.runner_executable instead.
-Uncompatible with certain runners, such as wine.</p>
+Incompatible with certain runners, such as wine.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or package</p>
@@ -55298,7 +55694,7 @@ open submodule of (YAML 1.1 value)</p>
 </dt>
 <dd>
 <p>Specific option to point to a runner executable directly, don’t set runner.package if you set this.
-Uncompatible with certain runners such as wine.</p>
+Incompatible with certain runners such as wine.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string or absolute path</p>
@@ -56801,6 +57197,54 @@ boolean</p>
 </code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">true
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mergiraf.nix" target="_top">
+&lt;home-manager/modules/programs/mergiraf.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.mergiraf.enableGitIntegration"></a><a class="term" href="options.xhtml#opt-programs.mergiraf.enableGitIntegration"><code class="option">programs.mergiraf.enableGitIntegration</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable git integration for mergiraf.</p><p>When enabled, mergiraf will be configured as git’s merge driver.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">&quot;lib.versionOlder config.home.stateVersion \&quot;26.05\&quot;&quot;
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mergiraf.nix" target="_top">
+&lt;home-manager/modules/programs/mergiraf.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.mergiraf.enableJujutsuIntegration"></a><a class="term" href="options.xhtml#opt-programs.mergiraf.enableJujutsuIntegration"><code class="option">programs.mergiraf.enableJujutsuIntegration</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable jujutsu integration for mergiraf.</p><p>When enabled, mergiraf will be configured as jujutsus’s merge tool.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">&quot;lib.versionOlder config.home.stateVersion \&quot;26.05\&quot;&quot;
 </code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -60417,7 +60861,7 @@ linked to the target location. This option has no effect
 if the source is a file.</p><p>If <code class="literal">false</code> (the default) then the target
 will be a symbolic link to the source directory. If
 <code class="literal">true</code> then the target will be a
-directory structure matching the source’s but whose leafs
+directory structure matching the source’s but whose leaves
 are symbolic links to the files of the source directory.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -60671,7 +61115,7 @@ boolean</p>
 <p><span class="emphasis"><em>Type:</em></span>
 null or boolean</p>
 
-<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">true
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">false
 </code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -63720,7 +64164,7 @@ open submodule of (TOML value)</p>
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   __config__ = {
     oldver = &quot;my_custom_oldver.json&quot;;
-    newver = &quot;~/seperately_placed_newver.json&quot;;
+    newver = &quot;~/separately_placed_newver.json&quot;;
     keyfile = &quot;keyfile.toml&quot;;
   };
 
@@ -64059,6 +64503,30 @@ boolean</p>
 null or package</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">pkgs.obsidian
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix" target="_top">
+&lt;home-manager/modules/programs/obsidian.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.obsidian.cli.enable"></a><a class="term" href="options.xhtml#opt-programs.obsidian.cli.enable"><code class="option">programs.obsidian.cli.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable the Obsidian CLI in <code class="literal">obsidian.json</code>.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">false
 </code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -68287,7 +68755,7 @@ non-empty string</p>
  </span>
 </dt>
 <dd>
-<p>Username or emaill address for Pandora music service authentication</p>
+<p>Username or email address for Pandora music service authentication</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 non-empty string</p>
@@ -70366,7 +70834,7 @@ positive integer, meaning &gt;0</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable quickshell, a flexbile QtQuick-based desktop shell toolkit…</p>
+<p>Whether to enable quickshell, a flexible QtQuick-based desktop shell toolkit…</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -75740,7 +76208,7 @@ open submodule of attribute set of anything</p>
 connections by default unless you specify tls option to be false.
 TLS connections default to port 6697, plain-text use port 6667.</p><p>UR<code class="literal">ircs://</code>, <code class="literal">irc://</code>, and <code class="literal">irc+insecure://</code> URLs are supported,
 in which case only the hostname and port parts will be used. If
-the scheme is <code class="literal">ircs/irc+insecure</code>, tls will be overriden and set
+the scheme is <code class="literal">ircs/irc+insecure</code>, tls will be overridden and set
 to true/false accordingly.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -77188,12 +77656,16 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>The lua5_4 package to use. Lua interpreter to use when configType is lua.</p>
+<p>Lua interpreter to use when configType is lua.</p><p>By default this is inferred from <code class="literal">sbarLuaPackage.passthru.luaModule</code>
+when available.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or package</p>
 
-<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">pkgs.lua5_4
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">pkgs.lua5_5
 </code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
@@ -83937,7 +84409,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -83948,8 +84420,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/qavm6bsbcccadl3rr88dqbywm5666xr5-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.thunderbird.profiles._name_.search.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.thunderbird.profiles._name_.search.meta.teams"><code class="option">programs.thunderbird.profiles.&lt;name&gt;.search.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/knf5m0famajw2bzbsg72b052iy1ynpck-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -92402,6 +92902,33 @@ boolean</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.zed-editor.enableMcpIntegration"></a><a class="term" href="options.xhtml#opt-programs.zed-editor.enableMcpIntegration"><code class="option">programs.zed-editor.enableMcpIntegration</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to integrate the MCP server config from
+<code class="option">programs.mcp.servers</code> into
+<code class="option">programs.zed-editor.userSettings.context_servers</code>.</p><p>Note: Settings defined in <code class="option">programs.zed-editor.userSettings.context_servers</code>
+will take precedence over the generated MCP configuration.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">false
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix" target="_top">
+&lt;home-manager/modules/programs/zed-editor.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.zed-editor.package"></a><a class="term" href="options.xhtml#opt-programs.zed-editor.package"><code class="option">programs.zed-editor.package</code>
   </a>
  </span>
@@ -99128,6 +99655,36 @@ package</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-services.clipman.extraArgs"></a><a class="term" href="options.xhtml#opt-services.clipman.extraArgs"><code class="option">services.clipman.extraArgs</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Extra arguments to be passed to the clipman executable.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of string</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[
+  &quot;--max-items&quot;
+  &quot;100&quot;
+]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/services/clipman.nix" target="_top">
+&lt;home-manager/modules/services/clipman.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-services.clipman.systemdTarget"></a><a class="term" href="options.xhtml#opt-services.clipman.systemdTarget"><code class="option">services.clipman.systemdTarget</code>
   </a>
  </span>
@@ -99689,7 +100246,7 @@ package</p>
  </span>
 </dt>
 <dd>
-<p>The curl package to use. Used by colima to donwload images.</p>
+<p>The curl package to use. Used by colima to download images.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
@@ -105067,7 +105624,7 @@ null or package</p>
  </span>
 </dt>
 <dd>
-<p>Configuration settings for hyprshell. All the avaiblable
+<p>Configuration settings for hyprshell. All the available
 options can be found here: <a class="link" href="https://github.com/H3rmt/hyprshell/blob/hyprshell-release/docs/CONFIGURE.md#config-options"  target="_top">https://github.com/H3rmt/hyprshell/blob/hyprshell-release/docs/CONFIGURE.md#config-options</a></p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -106257,7 +106814,7 @@ null or one of “normal”, “90”, “180”, “270”, “flipped”, “f
 </dt>
 <dd>
 <p>Ordered list of directives.
-See kanshi(5) for informations.</p>
+See kanshi(5) for information.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 list of attribute-tagged union with choices: include, output, profile</p>
@@ -115683,7 +116240,7 @@ string</p>
  </span>
 </dt>
 <dd>
-<p>Whether to completly enable or disable the crash recovery feature.</p>
+<p>Whether to completely enable or disable the crash recovery feature.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -129048,7 +129605,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable Vulkan in nixGL wrappers.</p><p>This is disabled by default bacause Vulkan brings in several libraries
+<p>Whether to enable Vulkan in nixGL wrappers.</p><p>This is disabled by default because Vulkan brings in several libraries
 that can cause symbol version conflicts in wrapped programs. Your
 mileage may vary.</p>
 
@@ -134713,7 +135270,7 @@ linked to the target location. This option has no effect
 if the source is a file.</p><p>If <code class="literal">false</code> (the default) then the target
 will be a symbolic link to the source directory. If
 <code class="literal">true</code> then the target will be a
-directory structure matching the source’s but whose leafs
+directory structure matching the source’s but whose leaves
 are symbolic links to the files of the source directory.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -134999,7 +135556,7 @@ linked to the target location. This option has no effect
 if the source is a file.</p><p>If <code class="literal">false</code> (the default) then the target
 will be a symbolic link to the source directory. If
 <code class="literal">true</code> then the target will be a
-directory structure matching the source’s but whose leafs
+directory structure matching the source’s but whose leaves
 are symbolic links to the files of the source directory.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -135285,7 +135842,7 @@ linked to the target location. This option has no effect
 if the source is a file.</p><p>If <code class="literal">false</code> (the default) then the target
 will be a symbolic link to the source directory. If
 <code class="literal">true</code> then the target will be a
-directory structure matching the source’s but whose leafs
+directory structure matching the source’s but whose leaves
 are symbolic links to the files of the source directory.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -136434,7 +136991,7 @@ linked to the target location. This option has no effect
 if the source is a file.</p><p>If <code class="literal">false</code> (the default) then the target
 will be a symbolic link to the source directory. If
 <code class="literal">true</code> then the target will be a
-directory structure matching the source’s but whose leafs
+directory structure matching the source’s but whose leaves
 are symbolic links to the files of the source directory.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
