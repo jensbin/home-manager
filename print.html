@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-8759301f.js";
+            window.path_to_searchindex_js = "searchindex-325e3385.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-19723085.js"></script>
+        <script src="toc-e16acae1.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -3693,6 +3693,19 @@ null or (list of string)</p>
 <ul>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix">&lt;home-manager/modules/accounts/calendar.nix&gt;</a></li>
 </ul>
+<h2 id="opt-accounts.calendar.accounts._name_.vdirsyncer.localReadOnly"><a class="header" href="#opt-accounts.calendar.accounts._name_.vdirsyncer.localReadOnly">accounts.calendar.accounts.&lt;name&gt;.vdirsyncer.localReadOnly</a></h2>
+<p>Whether vdirsyncer should treat the local storage as read-only.</p>
+<p>Changes that cannot be written to the local storage are handled
+according to the value of the <code>partialSync</code> option.</p>
+<p><em>Type:</em>
+null or boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix">&lt;home-manager/modules/accounts/calendar.nix&gt;</a></li>
+</ul>
 <h2 id="opt-accounts.calendar.accounts._name_.vdirsyncer.metadata"><a class="header" href="#opt-accounts.calendar.accounts._name_.vdirsyncer.metadata">accounts.calendar.accounts.&lt;name&gt;.vdirsyncer.metadata</a></h2>
 <p>Metadata keys that should be synchronized when vdirsyncer
 metasync is executed.</p>
@@ -4383,6 +4396,19 @@ null or (list of string)</p>
 <ul>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix">&lt;home-manager/modules/accounts/contacts.nix&gt;</a></li>
 </ul>
+<h2 id="opt-accounts.contact.accounts._name_.vdirsyncer.localReadOnly"><a class="header" href="#opt-accounts.contact.accounts._name_.vdirsyncer.localReadOnly">accounts.contact.accounts.&lt;name&gt;.vdirsyncer.localReadOnly</a></h2>
+<p>Whether vdirsyncer should treat the local storage as read-only.</p>
+<p>Changes that cannot be written to the local storage are handled
+according to the value of the <code>partialSync</code> option.</p>
+<p><em>Type:</em>
+null or boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix">&lt;home-manager/modules/accounts/contacts.nix&gt;</a></li>
+</ul>
 <h2 id="opt-accounts.contact.accounts._name_.vdirsyncer.metadata"><a class="header" href="#opt-accounts.contact.accounts._name_.vdirsyncer.metadata">accounts.contact.accounts.&lt;name&gt;.vdirsyncer.metadata</a></h2>
 <p>Metadata keys that should be synchronized when vdirsyncer
 metasync is executed.</p>
@@ -4588,6 +4614,7 @@ attribute set of (submodule)</p>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp">&lt;home-manager/modules/programs/msmtp&gt;</a></li>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix">&lt;home-manager/modules/programs/meli.nix&gt;</a></li>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync">&lt;home-manager/modules/programs/mbsync&gt;</a></li>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mblaze">&lt;home-manager/modules/programs/mblaze&gt;</a></li>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/lieer.nix">&lt;home-manager/modules/programs/lieer.nix&gt;</a></li>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix">&lt;home-manager/modules/programs/himalaya.nix&gt;</a></li>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail">&lt;home-manager/modules/programs/getmail&gt;</a></li>
@@ -5703,6 +5730,63 @@ string</p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix">&lt;home-manager/modules/accounts/email.nix&gt;</a></li>
+</ul>
+<h2 id="opt-accounts.email.accounts._name_.mblaze.enable"><a class="header" href="#opt-accounts.email.accounts._name_.mblaze.enable">accounts.email.accounts.&lt;name&gt;.mblaze.enable</a></h2>
+<p>Whether to enable mblaze for this email account.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mblaze">&lt;home-manager/modules/programs/mblaze&gt;</a></li>
+</ul>
+<h2 id="opt-accounts.email.accounts._name_.mblaze.sendMailCommand"><a class="header" href="#opt-accounts.email.accounts._name_.mblaze.sendMailCommand">accounts.email.accounts.&lt;name&gt;.mblaze.sendMailCommand</a></h2>
+<p>Command to send a mail, written to the <code>Sendmail:</code> entry of the
+account profile. If msmtp is enabled for the account, then this
+is set to
+<code>msmtpq --read-envelope-from --read-recipients</code>.</p>
+<p><code>mcom(1)</code> appends the <code>Sendmail-Args:</code> entry to it,
+<code>-t</code> by default, which asks for the recipients to be collected
+from the message headers. Set that entry through
+<a href="#opt-accounts.email.accounts._name_.mblaze.settings"></a> for a
+command that takes its arguments differently.</p>
+<p>When left null the entry is omitted and mblaze falls back to
+<code>sendmail</code> from <code>PATH</code>.</p>
+<p><em>Type:</em>
+null or string</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">"msmtpq --read-envelope-from --read-recipients"
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mblaze">&lt;home-manager/modules/programs/mblaze&gt;</a></li>
+</ul>
+<h2 id="opt-accounts.email.accounts._name_.mblaze.settings"><a class="header" href="#opt-accounts.email.accounts._name_.mblaze.settings">accounts.email.accounts.&lt;name&gt;.mblaze.settings</a></h2>
+<p>Entries added to this mblaze account profile, as documented in
+<code>mblaze-profile(5)</code>. An entry defined here overrides
+the generated one of the same name, as well as the one defined
+by <a href="#opt-programs.mblaze.settings"></a>.</p>
+<p><em>Type:</em>
+attribute set of string</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  Scan-Format = "%c%u%r %-3n %10d %17f %t %2i%s";
+}
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mblaze">&lt;home-manager/modules/programs/mblaze&gt;</a></li>
 </ul>
 <h2 id="opt-accounts.email.accounts._name_.mbsync.enable"><a class="header" href="#opt-accounts.email.accounts._name_.mbsync.enable">accounts.email.accounts.&lt;name&gt;.mbsync.enable</a></h2>
 <p>Whether to enable synchronization using mbsync.</p>
@@ -11178,7 +11262,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-meta.teams"><a class="header" href="#opt-meta.teams">meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -11193,7 +11277,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="news-1"><a href="#news-1" class="header">news</a></h1>
@@ -11841,7 +11925,6 @@ string</p>
 <li><a href="#amoco">amoco</a></li>
 <li><a href="#amp">amp</a></li>
 <li><a href="#andcli">andcli</a></li>
-<li><a href="#animdl">animdl</a></li>
 <li><a href="#anime-downloader">anime-downloader</a></li>
 <li><a href="#anki">anki</a></li>
 <li><a href="#antigravity">antigravity</a></li>
@@ -11891,6 +11974,8 @@ string</p>
 <li><a href="#codex">codex</a></li>
 <li><a href="#command-not-found">command-not-found</a></li>
 <li><a href="#comodoro">comodoro</a></li>
+<li><a href="#concord">concord</a></li>
+<li><a href="#crush">crush</a></li>
 <li><a href="#cudatext">cudatext</a></li>
 <li><a href="#cursor">cursor</a></li>
 <li><a href="#darcs">darcs</a></li>
@@ -11907,6 +11992,7 @@ string</p>
 <li><a href="#discord">discord</a></li>
 <li><a href="#distrobox">distrobox</a></li>
 <li><a href="#docker-cli">docker-cli</a></li>
+<li><a href="#dprint">dprint</a></li>
 <li><a href="#earthly">earthly</a></li>
 <li><a href="#ec">ec</a></li>
 <li><a href="#eclipse">eclipse</a></li>
@@ -11923,6 +12009,7 @@ string</p>
 <li><a href="#firefox">firefox</a></li>
 <li><a href="#firefoxpwa">firefoxpwa</a></li>
 <li><a href="#fish">fish</a></li>
+<li><a href="#flake-edit">flake-edit</a></li>
 <li><a href="#flashspace">flashspace</a></li>
 <li><a href="#floorp">floorp</a></li>
 <li><a href="#foliate">foliate</a></li>
@@ -11961,7 +12048,6 @@ string</p>
 <li><a href="#havoc">havoc</a></li>
 <li><a href="#helix">helix</a></li>
 <li><a href="#herdr">herdr</a></li>
-<li><a href="#hexchat">hexchat</a></li>
 <li><a href="#himalaya">himalaya</a></li>
 <li><a href="#home-manager">home-manager</a></li>
 <li><a href="#hstr">hstr</a></li>
@@ -11972,6 +12058,7 @@ string</p>
 <li><a href="#hyprlock">hyprlock</a></li>
 <li><a href="#hyprpanel">hyprpanel</a></li>
 <li><a href="#hyprshot">hyprshot</a></li>
+<li><a href="#hyprtoolkit">hyprtoolkit</a></li>
 <li><a href="#i3bar-river">i3bar-river</a></li>
 <li><a href="#i3blocks">i3blocks</a></li>
 <li><a href="#i3status">i3status</a></li>
@@ -12026,6 +12113,7 @@ string</p>
 <li><a href="#man">man</a></li>
 <li><a href="#mangohud">mangohud</a></li>
 <li><a href="#matplotlib">matplotlib</a></li>
+<li><a href="#mblaze">mblaze</a></li>
 <li><a href="#mbsync">mbsync</a></li>
 <li><a href="#mc">mc</a></li>
 <li><a href="#mcfly">mcfly</a></li>
@@ -12206,8 +12294,10 @@ string</p>
 <li><a href="#wayprompt">wayprompt</a></li>
 <li><a href="#wezterm">wezterm</a></li>
 <li><a href="#windsurf">windsurf</a></li>
+<li><a href="#wiremix">wiremix</a></li>
 <li><a href="#wleave">wleave</a></li>
 <li><a href="#wlogout">wlogout</a></li>
+<li><a href="#wlr-which-key">wlr-which-key</a></li>
 <li><a href="#wofi">wofi</a></li>
 <li><a href="#workstyle">workstyle</a></li>
 <li><a href="#xmobar">xmobar</a></li>
@@ -13956,60 +14046,6 @@ YAML 1.1 value</p>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/andcli.nix">&lt;home-manager/modules/programs/andcli.nix&gt;</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="animdl"><a href="#animdl" class="header">animdl</a></h1>
-<h2 id="opt-programs.animdl.enable"><a class="header" href="#opt-programs.animdl.enable">programs.animdl.enable</a></h2>
-<p>Whether to enable animdl.</p>
-<p><em>Type:</em>
-boolean</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">false
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">true
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/animdl.nix">&lt;home-manager/modules/programs/animdl.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.animdl.package"><a class="header" href="#opt-programs.animdl.package">programs.animdl.package</a></h2>
-<p>The animdl package to use.</p>
-<p><em>Type:</em>
-null or package</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">pkgs.animdl
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/animdl.nix">&lt;home-manager/modules/programs/animdl.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.animdl.settings"><a class="header" href="#opt-programs.animdl.settings">programs.animdl.settings</a></h2>
-<p>Configuration settings for animdl. All the available options can be found here:
-<a href="https://github.com/justfoolingaround/animdl?tab=readme-ov-file#configurations">https://github.com/justfoolingaround/animdl?tab=readme-ov-file#configurations</a>.</p>
-<p><em>Type:</em>
-YAML 1.1 value</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">{ }
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">{
-  default_player = "mpv";
-  default_provider = "animixplay";
-  ffmpeg = {
-    executable = "ffmpeg";
-    hls_download = false;
-    submerge = true;
-  };
-  quality_string = "best[subtitle]/best";
-  site_urls = {
-    animixplay = "https://www.animixplay.to/";
-  };
-}
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/animdl.nix">&lt;home-manager/modules/programs/animdl.nix&gt;</a></li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="anime-downloader"><a href="#anime-downloader" class="header">anime-downloader</a></h1>
 <h2 id="opt-programs.anime-downloader.enable"><a class="header" href="#opt-programs.anime-downloader.enable">programs.anime-downloader.enable</a></h2>
 <p>Whether to enable anime-downloader.</p>
@@ -14982,7 +15018,8 @@ null or string</p>
 <p>MCP server configuration written to
 <code>~/.gemini/config/mcp_config.json</code>.</p>
 <p>Remote servers use <code>serverUrl</code>; <code>url</code> and <code>httpUrl</code> are accepted
-for migration and converted automatically.</p>
+for migration and converted automatically. <code>enabled</code> is accepted
+and converted to <code>disabled</code>.</p>
 <p><em>Type:</em>
 JSON value</p>
 <p><em>Default:</em></p>
@@ -16393,7 +16430,7 @@ boolean</p>
 <h2 id="opt-programs.atuin.settings"><a class="header" href="#opt-programs.atuin.settings">programs.atuin.settings</a></h2>
 <p>Configuration written to
 <code>$XDG_CONFIG_HOME/atuin/config.toml</code>.</p>
-<p>See <a href="https://docs.atuin.sh/configuration/config/">https://docs.atuin.sh/configuration/config/</a> for the full list
+<p>See <a href="https://docs.atuin.sh/latest/configuration/config/">https://docs.atuin.sh/latest/configuration/config/</a> for the full list
 of options.</p>
 <p><em>Type:</em>
 Atuin configuration</p>
@@ -16417,7 +16454,7 @@ Atuin configuration</p>
 <p>Each theme is written to
 <code>$XDG_CONFIG_HOME/atuin/themes/theme-name.toml</code>
 where the name of each attribute is the theme-name</p>
-<p>See <a href="https://docs.atuin.sh/guide/theming/">https://docs.atuin.sh/guide/theming/</a> for the full list
+<p>See <a href="https://docs.atuin.sh/latest/guide/theming/">https://docs.atuin.sh/latest/guide/theming/</a> for the full list
 of options.</p>
 <p><em>Type:</em>
 attribute set of (TOML value or absolute path or strings concatenated with “\n”)</p>
@@ -19534,25 +19571,27 @@ strings concatenated with “\n” or absolute path</p>
 </ul>
 <h2 id="opt-programs.claude-code.hooks"><a class="header" href="#opt-programs.claude-code.hooks">programs.claude-code.hooks</a></h2>
 <p>Custom hooks for Claude Code.
-The attribute name becomes the hook filename, and the value is the hook script content.
+The attribute name becomes the hook filename, and the value is either:</p>
+<ul>
+<li>Inline content as a string</li>
+<li>A path to a file containing the hook script content
 Hooks are stored in the <code>hooks/</code> subdirectory of
-<code>programs.claude-code.configDir</code>.</p>
+<code>programs.claude-code.configDir</code> and made executable.</li>
+</ul>
 <p><em>Type:</em>
-attribute set of strings concatenated with “\n”</p>
+attribute set of (strings concatenated with “\n” or absolute path)</p>
 <p><em>Default:</em></p>
 <pre><code class="language-nix">{ }
 </code></pre>
 <p><em>Example:</em></p>
 <pre><code class="language-nix">{
-  post-commit = ''
-    #!/usr/bin/env bash
-    echo "Committed with message: $1"
-  '';
   pre-edit = ''
     #!/usr/bin/env bash
     echo "About to edit file: $1"
   '';
+  post-commit = ./hooks/post-commit.sh;
 }
+
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
@@ -20475,6 +20514,200 @@ open submodule of (TOML value)</p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/comodoro.nix">&lt;home-manager/modules/programs/comodoro.nix&gt;</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="concord"><a href="#concord" class="header">concord</a></h1>
+<h2 id="opt-programs.concord.enable"><a class="header" href="#opt-programs.concord.enable">programs.concord.enable</a></h2>
+<p>Whether to enable Feature-rich TUI client for Discord.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/concord.nix">&lt;home-manager/modules/programs/concord.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.concord.package"><a class="header" href="#opt-programs.concord.package">programs.concord.package</a></h2>
+<p>The concord-tui package to use.</p>
+<p><em>Type:</em>
+null or package</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">pkgs.concord-tui
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/concord.nix">&lt;home-manager/modules/programs/concord.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.concord.keymapSettings"><a class="header" href="#opt-programs.concord.keymapSettings">programs.concord.keymapSettings</a></h2>
+<p>Concord keymap configuration.
+See <a href="https://github.com/chojs23/concord/blob/main/docs/keymap-options.md">https://github.com/chojs23/concord/blob/main/docs/keymap-options.md</a> for supported values.</p>
+<p><em>Type:</em>
+open submodule of (TOML value)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/concord.nix">&lt;home-manager/modules/programs/concord.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.concord.settings"><a class="header" href="#opt-programs.concord.settings">programs.concord.settings</a></h2>
+<p>Concord configuration.
+See <a href="https://github.com/chojs23/concord/blob/main/src/config/options.rs">https://github.com/chojs23/concord/blob/main/src/config/options.rs</a> for supported values.</p>
+<p><em>Type:</em>
+open submodule of (TOML value)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/concord.nix">&lt;home-manager/modules/programs/concord.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.concord.themeSettings"><a class="header" href="#opt-programs.concord.themeSettings">programs.concord.themeSettings</a></h2>
+<p>Concord theme configuration.
+See <a href="https://github.com/chojs23/concord/blob/main/docs/theme-options.md">https://github.com/chojs23/concord/blob/main/docs/theme-options.md</a> for supported values.</p>
+<p><em>Type:</em>
+open submodule of (TOML value)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/concord.nix">&lt;home-manager/modules/programs/concord.nix&gt;</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="crush"><a href="#crush" class="header">crush</a></h1>
+<h2 id="opt-programs.crush.enable"><a class="header" href="#opt-programs.crush.enable">programs.crush.enable</a></h2>
+<p>Whether to enable Crush, Charm’s coding agent for the terminal.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/crush.nix">&lt;home-manager/modules/programs/crush.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.crush.enableMcpIntegration"><a class="header" href="#opt-programs.crush.enableMcpIntegration">programs.crush.enableMcpIntegration</a></h2>
+<p>Whether to integrate the MCP servers config from
+<code>programs.mcp.servers</code> into
+<code>programs.crush.settings.mcp</code>.</p>
+<p>Note: Settings defined in <code>programs.mcp.servers</code> are merged
+with <code>programs.crush.settings.mcp</code>, with Crush settings taking
+precedence.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/crush.nix">&lt;home-manager/modules/programs/crush.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.crush.package"><a class="header" href="#opt-programs.crush.package">programs.crush.package</a></h2>
+<p>The crush package to use.</p>
+<p><em>Type:</em>
+null or package</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">pkgs.crush
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/crush.nix">&lt;home-manager/modules/programs/crush.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.crush.settings"><a class="header" href="#opt-programs.crush.settings">programs.crush.settings</a></h2>
+<p>Configuration written to
+<code>$XDG_CONFIG_HOME/crush/crush.json</code>.
+See <a href="https://github.com/charmbracelet/crush">https://github.com/charmbracelet/crush</a> for the documentation.</p>
+<p>Crush expands <code>$VAR</code> and <code>$(command)</code> in configuration values, so
+secrets can be read at startup instead of being written to the Nix
+store.</p>
+<p>Note, <code>"$schema": "https://charm.land/crush.json"</code> is automatically
+added to the configuration.</p>
+<p><em>Type:</em>
+JSON value</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  models.large = {
+    model = "claude-sonnet-4-20250514";
+    provider = "anthropic";
+  };
+  providers.deepseek = {
+    type = "openai-compat";
+    base_url = "https://api.deepseek.com/v1";
+    api_key = "$(cat /run/secrets/deepseek-api-key)";
+    models = [
+      {
+        id = "deepseek-chat";
+        name = "Deepseek V3";
+      }
+    ];
+  };
+  lsp.nix.command = "nil";
+  options.disabled_tools = [ "sourcegraph" ];
+  permissions.allowed_tools = [ "view" ];
+}
+
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/crush.nix">&lt;home-manager/modules/programs/crush.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.crush.skills"><a class="header" href="#opt-programs.crush.skills">programs.crush.skills</a></h2>
+<p>Agent Skills for Crush.</p>
+<p>This option can be either:</p>
+<ul>
+<li>An attribute set defining skills</li>
+<li>A path to a directory containing skill folders</li>
+</ul>
+<p>If an attribute set is used, the attribute name becomes the skill
+directory name, and the value is either:</p>
+<ul>
+<li>Inline content as a string (creates <code>crush/skills/&lt;name&gt;/SKILL.md</code>)</li>
+<li>A path to a file (creates <code>crush/skills/&lt;name&gt;/SKILL.md</code>)</li>
+<li>A path to a directory (creates <code>crush/skills/&lt;name&gt;/</code> with all files)</li>
+</ul>
+<p>This also accepts Nix store paths, for example a skill directory from
+a package.</p>
+<p>If a path is used, it is expected to contain one folder per skill name,
+each containing a <code>SKILL.md</code>. The directory is symlinked to
+<code>$XDG_CONFIG_HOME/crush/skills/</code>.</p>
+<p><em>Type:</em>
+(attribute set of (strings concatenated with “\n” or absolute path or string)) or absolute path</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  git-release = ''
+    ---
+    name: git-release
+    description: Create consistent releases and changelogs
+    ---
+
+    ## What I do
+
+    - Draft release notes from merged PRs
+    - Propose a version bump
+  '';
+
+  # A skill can also be a directory containing SKILL.md and other files.
+  data-analysis = ./skills/data-analysis;
+}
+
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/crush.nix">&lt;home-manager/modules/programs/crush.nix&gt;</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="cudatext"><a href="#cudatext" class="header">cudatext</a></h1>
@@ -22209,6 +22442,65 @@ JSON value</p>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/docker-cli.nix">&lt;home-manager/modules/programs/docker-cli.nix&gt;</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="dprint"><a href="#dprint" class="header">dprint</a></h1>
+<h2 id="opt-programs.dprint.enable"><a class="header" href="#opt-programs.dprint.enable">programs.dprint.enable</a></h2>
+<p>Whether to enable dprint: a code formatter for common filetypes like markdown, toml, yaml,
+and many more. See https://dprint.dev/
+.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/dprint.nix">&lt;home-manager/modules/programs/dprint.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.dprint.package"><a class="header" href="#opt-programs.dprint.package">programs.dprint.package</a></h2>
+<p>The dprint package to use.</p>
+<p><em>Type:</em>
+null or package</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">pkgs.dprint
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/dprint.nix">&lt;home-manager/modules/programs/dprint.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.dprint.settings"><a class="header" href="#opt-programs.dprint.settings">programs.dprint.settings</a></h2>
+<p>Settings to add to <code>$XDG_CONFIG_HOME/dprint/dprint.json</code>.</p>
+<p><em>Type:</em>
+JSON value</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  excludes = [
+    "**/node_modules"
+    "**/*-lock.json"
+  ];
+  plugins = [
+    "https://plugins.dprint.dev/typescript-0.96.1.wasm"
+    "${pkgs.dprint-plugins.g-plane-pretty_yaml}/plugin.wasm"
+  ];
+  json = { };
+  malva = { };
+  markdown = { };
+  toml = { };
+  typescript = { };
+  yaml = { };
+}
+
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/dprint.nix">&lt;home-manager/modules/programs/dprint.nix&gt;</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="earthly"><a href="#earthly" class="header">earthly</a></h1>
 <h2 id="opt-programs.earthly.enable"><a class="header" href="#opt-programs.earthly.enable">programs.earthly.enable</a></h2>
 <p>Whether to enable earthly.</p>
@@ -23607,7 +23899,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.firefox.profiles._name_.bookmarks.meta.teams"><a class="header" href="#opt-programs.firefox.profiles._name_.bookmarks.meta.teams">programs.firefox.profiles.&lt;name&gt;.bookmarks.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -23622,7 +23914,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.firefox.profiles._name_.bookmarks.settings"><a class="header" href="#opt-programs.firefox.profiles._name_.bookmarks.settings">programs.firefox.profiles.&lt;name&gt;.bookmarks.settings</a></h2>
 <p>Custom bookmarks.</p>
@@ -23997,7 +24289,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.firefox.profiles._name_.handlers.meta.teams"><a class="header" href="#opt-programs.firefox.profiles._name_.handlers.meta.teams">programs.firefox.profiles.&lt;name&gt;.handlers.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -24012,7 +24304,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.firefox.profiles._name_.handlers.mimeTypes"><a class="header" href="#opt-programs.firefox.profiles._name_.handlers.mimeTypes">programs.firefox.profiles.&lt;name&gt;.handlers.mimeTypes</a></h2>
 <p>Attribute set mapping MIME types to their handler configurations.</p>
@@ -24405,7 +24697,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.firefox.profiles._name_.search.meta.teams"><a class="header" href="#opt-programs.firefox.profiles._name_.search.meta.teams">programs.firefox.profiles.&lt;name&gt;.search.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -24420,7 +24712,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.firefox.profiles._name_.search.order"><a class="header" href="#opt-programs.firefox.profiles._name_.search.order">programs.firefox.profiles.&lt;name&gt;.search.order</a></h2>
 <p>The order the search engines are listed in. Any engines that
@@ -25297,6 +25589,63 @@ strings concatenated with “\n”</p>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix">&lt;home-manager/modules/programs/fish.nix&gt;</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="flake-edit"><a href="#flake-edit" class="header">flake-edit</a></h1>
+<h2 id="opt-programs.flake-edit.enable"><a class="header" href="#opt-programs.flake-edit.enable">programs.flake-edit.enable</a></h2>
+<p>Whether to enable flake-edit.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/flake-edit.nix">&lt;home-manager/modules/programs/flake-edit.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.flake-edit.package"><a class="header" href="#opt-programs.flake-edit.package">programs.flake-edit.package</a></h2>
+<p>The flake-edit package to use.</p>
+<p><em>Type:</em>
+null or package</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">pkgs.flake-edit
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/flake-edit.nix">&lt;home-manager/modules/programs/flake-edit.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.flake-edit.settings"><a class="header" href="#opt-programs.flake-edit.settings">programs.flake-edit.settings</a></h2>
+<p>Configuration written to <code>$XDG_CONFIG_HOME/flake-edit/config.toml</code> on Linux or
+<code>$HOME/Library/Application Support/flake-edit/config.toml</code> on Darwin.
+See <a href="https://github.com/a-kenji/flake-edit#configuration">https://github.com/a-kenji/flake-edit#configuration</a> for documentation.</p>
+<p><em>Type:</em>
+TOML value</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  follow = {
+    aliases = {
+      nixpkgs = [
+        "nixpkgs-lib"
+      ];
+    };
+    ignore = [
+      "systems"
+      "crane.flake-utils"
+    ];
+    max_depth = 1;
+    transitive_min = 2;
+  };
+}
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/flake-edit.nix">&lt;home-manager/modules/programs/flake-edit.nix&gt;</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="flashspace"><a href="#flashspace" class="header">flashspace</a></h1>
 <h2 id="opt-programs.flashspace.enable"><a class="header" href="#opt-programs.flashspace.enable">programs.flashspace.enable</a></h2>
 <p>Whether to enable FlashSpace workspace manager for macOS.</p>
@@ -25661,7 +26010,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.floorp.profiles._name_.bookmarks.meta.teams"><a class="header" href="#opt-programs.floorp.profiles._name_.bookmarks.meta.teams">programs.floorp.profiles.&lt;name&gt;.bookmarks.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -25676,7 +26025,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.floorp.profiles._name_.bookmarks.settings"><a class="header" href="#opt-programs.floorp.profiles._name_.bookmarks.settings">programs.floorp.profiles.&lt;name&gt;.bookmarks.settings</a></h2>
 <p>Custom bookmarks.</p>
@@ -26051,7 +26400,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.floorp.profiles._name_.handlers.meta.teams"><a class="header" href="#opt-programs.floorp.profiles._name_.handlers.meta.teams">programs.floorp.profiles.&lt;name&gt;.handlers.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -26066,7 +26415,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.floorp.profiles._name_.handlers.mimeTypes"><a class="header" href="#opt-programs.floorp.profiles._name_.handlers.mimeTypes">programs.floorp.profiles.&lt;name&gt;.handlers.mimeTypes</a></h2>
 <p>Attribute set mapping MIME types to their handler configurations.</p>
@@ -26459,7 +26808,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.floorp.profiles._name_.search.meta.teams"><a class="header" href="#opt-programs.floorp.profiles._name_.search.meta.teams">programs.floorp.profiles.&lt;name&gt;.search.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -26474,7 +26823,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.floorp.profiles._name_.search.order"><a class="header" href="#opt-programs.floorp.profiles._name_.search.order">programs.floorp.profiles.&lt;name&gt;.search.order</a></h2>
 <p>The order the search engines are listed in. Any engines that
@@ -30865,391 +31214,6 @@ TOML value</p>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/herdr.nix">&lt;home-manager/modules/programs/herdr.nix&gt;</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="hexchat"><a href="#hexchat" class="header">hexchat</a></h1>
-<h2 id="opt-programs.hexchat.enable"><a class="header" href="#opt-programs.hexchat.enable">programs.hexchat.enable</a></h2>
-<p>Whether to enable HexChat, a graphical IRC client.</p>
-<p><em>Type:</em>
-boolean</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">false
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">true
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.package"><a class="header" href="#opt-programs.hexchat.package">programs.hexchat.package</a></h2>
-<p>The hexchat package to use.</p>
-<p><em>Type:</em>
-null or package</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">pkgs.hexchat
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels"><a class="header" href="#opt-programs.hexchat.channels">programs.hexchat.channels</a></h2>
-<p>Configures <code>$XDG_CONFIG_HOME/hexchat/servlist.conf</code>.</p>
-<p><em>Type:</em>
-attribute set of (submodule)</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">{ }
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">{
-  oftc = {
-    autojoin = [
-      "#home-manager"
-      "#linux"
-    ];
-    charset = "UTF-8 (Unicode)";
-    commands = [
-      "ECHO Buzz Lightyear sent you a message: 'To Infinity... and Beyond!'"
-    ];
-    loginMethod = sasl;
-    nickname = "my_nickname";
-    nickname2 = "my_secondchoice";
-    options = {
-      acceptInvalidSSLCertificates = false;
-      autoconnect = true;
-      bypassProxy = true;
-      connectToSelectedServerOnly = true;
-      useGlobalUserInformation = false;
-      forceSSL = false;
-    };
-    password = "my_password";
-    realName = "my_realname";
-    servers = [
-      "irc.oftc.net"
-    ];
-    userName = "my_username";
-  };
-}
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.autojoin"><a class="header" href="#opt-programs.hexchat.channels._name_.autojoin">programs.hexchat.channels.&lt;name&gt;.autojoin</a></h2>
-<p>Channels list to autojoin on connecting to server.</p>
-<p><em>Type:</em>
-list of string</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">[ ]
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">[
-  "#home-manager"
-  "#linux"
-  "#nix"
-]
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.charset"><a class="header" href="#opt-programs.hexchat.channels._name_.charset">programs.hexchat.channels.&lt;name&gt;.charset</a></h2>
-<p>Character set.</p>
-<p><em>Type:</em>
-null or string</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">"UTF-8 (Unicode)"
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.commands"><a class="header" href="#opt-programs.hexchat.channels._name_.commands">programs.hexchat.channels.&lt;name&gt;.commands</a></h2>
-<p>Commands to be executed on connecting to server.</p>
-<p><em>Type:</em>
-list of string</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">[ ]
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">[ "ECHO Greetings fellow Nixer! ]
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.loginMethod"><a class="header" href="#opt-programs.hexchat.channels._name_.loginMethod">programs.hexchat.channels.&lt;name&gt;.loginMethod</a></h2>
-<p>The login method. The allowed options are:</p>
-<ul>
-<li>
-<p><em>‌<code>null</code>‌</em></p>
-<p>Default</p>
-</li>
-<li>
-<p><em>‌<code>"nickServMsg"</code>‌</em></p>
-<p>NickServ (<code>/MSG NickServ</code> + password)</p>
-</li>
-<li>
-<p><em>‌<code>"nickServ"</code>‌</em></p>
-<p>NickServ (<code>/NICKSERV</code> + password)</p>
-</li>
-<li>
-<p><em>‌<code>"challengeAuth"</code>‌</em></p>
-<p>Challenge Auth (username + password)</p>
-</li>
-<li>
-<p><em>‌<code>"sasl"</code>‌</em></p>
-<p>SASL (username + password)</p>
-</li>
-<li>
-<p><em>‌<code>"serverPassword"</code>‌</em></p>
-<p>Server password (<code>/PASS</code> password)</p>
-</li>
-<li>
-<p><em>‌<code>"saslExternal"</code>‌</em></p>
-<p>SASL EXTERNAL (cert)</p>
-</li>
-<li>
-<p><em>‌<code>"customCommands"</code>‌</em></p>
-<p>Use “commands” field for auth. For example</p>
-<pre><code class="language-nix">commands = [ "/msg NickServ IDENTIFY my_password" ]
-</code></pre>
-</li>
-</ul>
-<p><em>Type:</em>
-null or one of “challengeAuth”, “customCommands”, “nickServ”, “nickServMsg”, “sasl”, “saslExternal”, “serverPassword”</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.nickname"><a class="header" href="#opt-programs.hexchat.channels._name_.nickname">programs.hexchat.channels.&lt;name&gt;.nickname</a></h2>
-<p>Primary nickname.</p>
-<p><em>Type:</em>
-null or string</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.nickname2"><a class="header" href="#opt-programs.hexchat.channels._name_.nickname2">programs.hexchat.channels.&lt;name&gt;.nickname2</a></h2>
-<p>Secondary nickname.</p>
-<p><em>Type:</em>
-null or string</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.options"><a class="header" href="#opt-programs.hexchat.channels._name_.options">programs.hexchat.channels.&lt;name&gt;.options</a></h2>
-<p>Channel options.</p>
-<p><em>Type:</em>
-null or (submodule)</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">{
-  autoconnect = true;
-  useGlobalUserInformation = true;
-}
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.options.acceptInvalidSSLCertificates"><a class="header" href="#opt-programs.hexchat.channels._name_.options.acceptInvalidSSLCertificates">programs.hexchat.channels.&lt;name&gt;.options.acceptInvalidSSLCertificates</a></h2>
-<p>Accept invalid SSL certificates.</p>
-<p><em>Type:</em>
-null or boolean</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">false
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.options.autoconnect"><a class="header" href="#opt-programs.hexchat.channels._name_.options.autoconnect">programs.hexchat.channels.&lt;name&gt;.options.autoconnect</a></h2>
-<p>Autoconnect to network.</p>
-<p><em>Type:</em>
-null or boolean</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">false
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.options.bypassProxy"><a class="header" href="#opt-programs.hexchat.channels._name_.options.bypassProxy">programs.hexchat.channels.&lt;name&gt;.options.bypassProxy</a></h2>
-<p>Bypass proxy.</p>
-<p><em>Type:</em>
-null or boolean</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">true
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.options.connectToSelectedServerOnly"><a class="header" href="#opt-programs.hexchat.channels._name_.options.connectToSelectedServerOnly">programs.hexchat.channels.&lt;name&gt;.options.connectToSelectedServerOnly</a></h2>
-<p>Connect to selected server only.</p>
-<p><em>Type:</em>
-null or boolean</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">true
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.options.forceSSL"><a class="header" href="#opt-programs.hexchat.channels._name_.options.forceSSL">programs.hexchat.channels.&lt;name&gt;.options.forceSSL</a></h2>
-<p>Use SSL for all servers.</p>
-<p><em>Type:</em>
-null or boolean</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">false
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.options.useGlobalUserInformation"><a class="header" href="#opt-programs.hexchat.channels._name_.options.useGlobalUserInformation">programs.hexchat.channels.&lt;name&gt;.options.useGlobalUserInformation</a></h2>
-<p>Use global user information.</p>
-<p><em>Type:</em>
-null or boolean</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">false
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.password"><a class="header" href="#opt-programs.hexchat.channels._name_.password">programs.hexchat.channels.&lt;name&gt;.password</a></h2>
-<p>Password to use. Note this password will be readable by all user’s
-in the Nix store.</p>
-<p><em>Type:</em>
-null or string</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.realName"><a class="header" href="#opt-programs.hexchat.channels._name_.realName">programs.hexchat.channels.&lt;name&gt;.realName</a></h2>
-<p>Real name. Is used to populate the real name field that appears when
-someone uses the <code>WHOIS</code> command on your nick.</p>
-<p><em>Type:</em>
-null or string</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.servers"><a class="header" href="#opt-programs.hexchat.channels._name_.servers">programs.hexchat.channels.&lt;name&gt;.servers</a></h2>
-<p>IRC Server Address List.</p>
-<p><em>Type:</em>
-list of string</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">[ ]
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">[
-  "irc.oftc.net"
-]
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.channels._name_.userName"><a class="header" href="#opt-programs.hexchat.channels._name_.userName">programs.hexchat.channels.&lt;name&gt;.userName</a></h2>
-<p>User name. Part of your <code>user@host</code> hostmask that
-appears to other on IRC.</p>
-<p><em>Type:</em>
-null or string</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.overwriteConfigFiles"><a class="header" href="#opt-programs.hexchat.overwriteConfigFiles">programs.hexchat.overwriteConfigFiles</a></h2>
-<p>Enables overwriting HexChat configuration files
-(<code>hexchat.conf</code>, <code>servlist.conf</code>).
-Any existing HexChat configuration will be lost. Make sure to back up
-any previous configuration before enabling this.</p>
-<p>Enabling this setting is recommended, because everytime HexChat
-application is closed it overwrites Nix/Home Manager provided
-configuration files, causing:</p>
-<ol>
-<li>Nix/Home Manager provided configuration to be out of sync with
-actual active HexChat configuration.</li>
-<li>Nix/Home Manager updates to be blocked until configuration files are
-manually removed.</li>
-</ol>
-<p><em>Type:</em>
-null or boolean</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">false
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.settings"><a class="header" href="#opt-programs.hexchat.settings">programs.hexchat.settings</a></h2>
-<p>Configuration for <code>$XDG_CONFIG_HOME/hexchat/hexchat.conf</code>, see
-<a href="https://hexchat.readthedocs.io/en/latest/settings.html#list-of-settings">https://hexchat.readthedocs.io/en/latest/settings.html#list-of-settings</a>
-for supported values.</p>
-<p><em>Type:</em>
-null or (attribute set of string)</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">{
-  irc_nick1 = "mynick";
-  irc_username = "bob";
-  irc_realname = "Bart Simpson";
-  text_font = "Monospace 14";
-};
-
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<h2 id="opt-programs.hexchat.theme"><a class="header" href="#opt-programs.hexchat.theme">programs.hexchat.theme</a></h2>
-<p>Theme package for HexChat. Expects a derivation containing decompressed
-theme files. Note, <code>.hct</code> files are actually ZIP files,
-as seen in example.</p>
-<p><em>Type:</em>
-null or package</p>
-<p><em>Default:</em></p>
-<pre><code class="language-nix">null
-</code></pre>
-<p><em>Example:</em></p>
-<pre><code class="language-nix">source = pkgs.fetchzip {
-  url = "https://dl.hexchat.net/themes/Monokai.hct#Monokai.zip";
-  sha256 = "sha256-WCdgEr8PwKSZvBMs0fN7E2gOjNM0c2DscZGSKSmdID0=";
-  stripRoot = false;
-};
-
-</code></pre>
-<p><em>Declared by:</em></p>
-<ul>
-<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix">&lt;home-manager/modules/programs/hexchat.nix&gt;</a></li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="himalaya"><a href="#himalaya" class="header">himalaya</a></h1>
 <h2 id="opt-programs.himalaya.enable"><a class="header" href="#opt-programs.himalaya.enable">programs.himalaya.enable</a></h2>
 <p>Whether to enable the email client Himalaya CLI.</p>
@@ -31858,6 +31822,56 @@ null or string</p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprshot.nix">&lt;home-manager/modules/programs/hyprshot.nix&gt;</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="hyprtoolkit"><a href="#hyprtoolkit" class="header">hyprtoolkit</a></h1>
+<h2 id="opt-programs.hyprtoolkit.enable"><a class="header" href="#opt-programs.hyprtoolkit.enable">programs.hyprtoolkit.enable</a></h2>
+<p>Whether to enable A GUI toolkit for developing applications that run natively on Wayland.
+It’s specifically made for Hyprland’s needs, but will generally run on
+any Wayland compositor that supports modern standards.
+.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprtoolkit.nix">&lt;home-manager/modules/programs/hyprtoolkit.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.hyprtoolkit.package"><a class="header" href="#opt-programs.hyprtoolkit.package">programs.hyprtoolkit.package</a></h2>
+<p>The hyprtoolkit package to use.</p>
+<p><em>Type:</em>
+null or package</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">pkgs.hyprtoolkit
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprtoolkit.nix">&lt;home-manager/modules/programs/hyprtoolkit.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.hyprtoolkit.settings"><a class="header" href="#opt-programs.hyprtoolkit.settings">programs.hyprtoolkit.settings</a></h2>
+<p>The configuration written to <code>$XDG_CONFIG_HOME/hypr/hyprtoolkit.conf</code>.
+More options can be found here: <a href="https://wiki.hypr.land/Hypr-Ecosystem/hyprtoolkit/">https://wiki.hypr.land/Hypr-Ecosystem/hyprtoolkit/</a></p>
+<p><em>Type:</em>
+Hyprtoolkit configuration values</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  background = "0xFF181818";
+  base = "0xFF202020";
+  h1_size = 19;
+  h2_size = 15;
+}
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprtoolkit.nix">&lt;home-manager/modules/programs/hyprtoolkit.nix&gt;</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="i3bar-river"><a href="#i3bar-river" class="header">i3bar-river</a></h1>
@@ -37236,7 +37250,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.librewolf.profiles._name_.bookmarks.meta.teams"><a class="header" href="#opt-programs.librewolf.profiles._name_.bookmarks.meta.teams">programs.librewolf.profiles.&lt;name&gt;.bookmarks.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -37251,7 +37265,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.librewolf.profiles._name_.bookmarks.settings"><a class="header" href="#opt-programs.librewolf.profiles._name_.bookmarks.settings">programs.librewolf.profiles.&lt;name&gt;.bookmarks.settings</a></h2>
 <p>Custom bookmarks.</p>
@@ -37626,7 +37640,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.librewolf.profiles._name_.handlers.meta.teams"><a class="header" href="#opt-programs.librewolf.profiles._name_.handlers.meta.teams">programs.librewolf.profiles.&lt;name&gt;.handlers.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -37641,7 +37655,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.librewolf.profiles._name_.handlers.mimeTypes"><a class="header" href="#opt-programs.librewolf.profiles._name_.handlers.mimeTypes">programs.librewolf.profiles.&lt;name&gt;.handlers.mimeTypes</a></h2>
 <p>Attribute set mapping MIME types to their handler configurations.</p>
@@ -38034,7 +38048,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.librewolf.profiles._name_.search.meta.teams"><a class="header" href="#opt-programs.librewolf.profiles._name_.search.meta.teams">programs.librewolf.profiles.&lt;name&gt;.search.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -38049,7 +38063,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.librewolf.profiles._name_.search.order"><a class="header" href="#opt-programs.librewolf.profiles._name_.search.order">programs.librewolf.profiles.&lt;name&gt;.search.order</a></h2>
 <p>The order the search engines are listed in. Any engines that
@@ -39607,7 +39621,7 @@ boolean</p>
 <p><em>Type:</em>
 null or package</p>
 <p><em>Default:</em></p>
-<pre><code class="language-nix">if pkgs.stdenv.isDarwin &amp;&amp; lib.versionAtLeast config.home.stateVersion "26.05" then
+<pre><code class="language-nix">if pkgs.stdenv.hostPlatform.isDarwin &amp;&amp; lib.versionAtLeast config.home.stateVersion "26.05" then
   null
 else if cfg.man-db.enable then
   pkgs.man
@@ -39817,6 +39831,69 @@ strings concatenated with “\n”</p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/matplotlib.nix">&lt;home-manager/modules/programs/matplotlib.nix&gt;</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="mblaze"><a href="#mblaze" class="header">mblaze</a></h1>
+<h2 id="opt-programs.mblaze.enable"><a class="header" href="#opt-programs.mblaze.enable">programs.mblaze.enable</a></h2>
+<p>Whether to enable mblaze, unix utilities to deal with Maildir.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mblaze">&lt;home-manager/modules/programs/mblaze&gt;</a></li>
+</ul>
+<h2 id="opt-programs.mblaze.package"><a class="header" href="#opt-programs.mblaze.package">programs.mblaze.package</a></h2>
+<p>The mblaze package to use.</p>
+<p><em>Type:</em>
+package</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">pkgs.mblaze
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mblaze">&lt;home-manager/modules/programs/mblaze&gt;</a></li>
+</ul>
+<h2 id="opt-programs.mblaze.editor"><a class="header" href="#opt-programs.mblaze.editor">programs.mblaze.editor</a></h2>
+<p>Editor <code>mcom(1)</code> opens drafts with, written to the
+<code>Editor:</code> entry of every generated profile. When left null
+mblaze falls back to <code>MBLAZE_EDITOR</code>, then <code>VISUAL</code>,
+then <code>EDITOR</code>.</p>
+<p><em>Type:</em>
+null or string</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">"nvim"
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mblaze">&lt;home-manager/modules/programs/mblaze&gt;</a></li>
+</ul>
+<h2 id="opt-programs.mblaze.settings"><a class="header" href="#opt-programs.mblaze.settings">programs.mblaze.settings</a></h2>
+<p>Entries added to every generated profile, as documented in
+<code>mblaze-profile(5)</code>. An entry defined here overrides
+the generated one of the same name, and is in turn overridden
+by <a href="#opt-accounts.email.accounts._name_.mblaze.settings"></a>.</p>
+<p><em>Type:</em>
+attribute set of string</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  Scan-Format = "%c%u%r %-3n %10d %17f %t %2i%s";
+}
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/mblaze">&lt;home-manager/modules/programs/mblaze&gt;</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="mbsync"><a href="#mbsync" class="header">mbsync</a></h1>
@@ -42704,7 +42781,7 @@ boolean</p>
 <p><em>Type:</em>
 boolean</p>
 <p><em>Default:</em></p>
-<pre><code class="language-nix">pkgs.stdenv.isLinux
+<pre><code class="language-nix">pkgs.stdenv.hostPlatform.isLinux
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
@@ -44102,7 +44179,7 @@ null or package</p>
 <p><em>Type:</em>
 string or absolute path</p>
 <p><em>Default:</em></p>
-<pre><code class="language-nix">if pkgs.stdenv.isDarwin &amp;&amp; !config.xdg.enable then
+<pre><code class="language-nix">if pkgs.stdenv.hostPlatform.isDarwin &amp;&amp; !config.xdg.enable then
   "Library/Application Support/nushell"
 else
   "${config.xdg.configHome}/nushell";
@@ -56126,7 +56203,7 @@ list of lib.maintainers</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.thunderbird.profiles._name_.search.meta.teams"><a class="header" href="#opt-programs.thunderbird.profiles._name_.search.meta.teams">programs.thunderbird.profiles.&lt;name&gt;.search.meta.teams</a></h2>
 <p>List of team maintainers of each module.
@@ -56141,7 +56218,7 @@ list of lib.teams</p>
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
-<li><a href="file:///nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix">/nix/store/grir922ynsi1acqkrxm6ijxfp5xnwdha-source/modules/generic/meta-maintainers.nix</a></li>
+<li><a href="file:///nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix">/nix/store/k3l29h5zgrq9bg5m483v4di1v88y7ygp-source/modules/generic/meta-maintainers.nix</a></li>
 </ul>
 <h2 id="opt-programs.thunderbird.profiles._name_.search.order"><a class="header" href="#opt-programs.thunderbird.profiles._name_.search.order">programs.thunderbird.profiles.&lt;name&gt;.search.order</a></h2>
 <p>The order the search engines are listed in. Any engines that
@@ -60897,6 +60974,56 @@ absolute path or JSON value</p>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/windsurf.nix">&lt;home-manager/modules/programs/windsurf.nix&gt;</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="wiremix"><a href="#wiremix" class="header">wiremix</a></h1>
+<h2 id="opt-programs.wiremix.enable"><a class="header" href="#opt-programs.wiremix.enable">programs.wiremix.enable</a></h2>
+<p>Whether to enable wiremix.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/wiremix.nix">&lt;home-manager/modules/programs/wiremix.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.wiremix.package"><a class="header" href="#opt-programs.wiremix.package">programs.wiremix.package</a></h2>
+<p>The wiremix package to use.</p>
+<p><em>Type:</em>
+null or package</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">pkgs.wiremix
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/wiremix.nix">&lt;home-manager/modules/programs/wiremix.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.wiremix.settings"><a class="header" href="#opt-programs.wiremix.settings">programs.wiremix.settings</a></h2>
+<p>Configuration written to
+<code>$XDG_CONFIG_HOME/wiremix/wiremix.toml</code></p>
+<p>See <a href="https://github.com/tsowell/wiremix#configuration">https://github.com/tsowell/wiremix#configuration</a> for more
+information.</p>
+<p><em>Type:</em>
+TOML value</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  mouse = false;
+  peaks = "auto";
+  theme = "default";
+  max_volume_percent = 100.0;
+}
+
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/wiremix.nix">&lt;home-manager/modules/programs/wiremix.nix&gt;</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="wleave"><a href="#wleave" class="header">wleave</a></h1>
 <h2 id="opt-programs.wleave.enable"><a class="header" href="#opt-programs.wleave.enable">programs.wleave.enable</a></h2>
 <p>Whether to enable wleave.</p>
@@ -61173,6 +61300,111 @@ null or absolute path or strings concatenated with “\n”</p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/wlogout.nix">&lt;home-manager/modules/programs/wlogout.nix&gt;</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="wlr-which-key"><a href="#wlr-which-key" class="header">wlr-which-key</a></h1>
+<h2 id="opt-programs.wlr-which-key.enable"><a class="header" href="#opt-programs.wlr-which-key.enable">programs.wlr-which-key.enable</a></h2>
+<p>Whether to enable wlr-which-key, a keymap manager for wlroots-based compositors.</p>
+<p><em>Type:</em>
+boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">false
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">true
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/wlr-which-key.nix">&lt;home-manager/modules/programs/wlr-which-key.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.wlr-which-key.package"><a class="header" href="#opt-programs.wlr-which-key.package">programs.wlr-which-key.package</a></h2>
+<p>The wlr-which-key package to use.</p>
+<p><em>Type:</em>
+null or package</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">pkgs.wlr-which-key
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/wlr-which-key.nix">&lt;home-manager/modules/programs/wlr-which-key.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.wlr-which-key.extraMenus"><a class="header" href="#opt-programs.wlr-which-key.extraMenus">programs.wlr-which-key.extraMenus</a></h2>
+<p>Additional named menu configurations, each written to
+<code>$XDG_CONFIG_HOME/wlr-which-key/&lt;name&gt;.yaml</code>.
+These can be launched with <code>wlr-which-key &lt;name&gt;.yaml</code>.</p>
+<p><em>Type:</em>
+attribute set of (YAML 1.1 value)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  apps = {
+    anchor = "bottom-left";
+    menu = [
+      { key = "f"; desc = "Firefox"; cmd = "firefox"; }
+      { key = "v"; desc = "Vesktop"; cmd = "vesktop"; }
+      { key = "q"; desc = "Qutebrowser"; cmd = "qutebrowser"; }
+    ];
+  };
+  power = {
+    menu = [
+      { key = "s"; desc = "Sleep"; cmd = "systemctl suspend"; }
+      { key = "r"; desc = "Reboot"; cmd = "reboot"; }
+      { key = "o"; desc = "Off"; cmd = "poweroff"; }
+    ];
+  };
+}
+
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/wlr-which-key.nix">&lt;home-manager/modules/programs/wlr-which-key.nix&gt;</a></li>
+</ul>
+<h2 id="opt-programs.wlr-which-key.settings"><a class="header" href="#opt-programs.wlr-which-key.settings">programs.wlr-which-key.settings</a></h2>
+<p>Main wlr-which-key configuration written to
+<code>$XDG_CONFIG_HOME/wlr-which-key/config.yaml</code>.</p>
+<p>See <a href="https://github.com/MaxVerevkin/wlr-which-key#configuration">https://github.com/MaxVerevkin/wlr-which-key#configuration</a>
+for the full list of options.</p>
+<p><em>Type:</em>
+YAML 1.1 value</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  font = "JetBrainsMono Nerd Font 12";
+  background = "#282828d0";
+  color = "#fbf1c7";
+  border = "#8ec07c";
+  separator = " ➜ ";
+  border_width = 2;
+  corner_r = 10;
+  padding = 15;
+  rows_per_column = 5;
+  column_padding = 25;
+  anchor = "center";
+  margin_right = 0;
+  margin_bottom = 0;
+  margin_left = 0;
+  margin_top = 0;
+  menu = [
+    {
+      key = "p";
+      desc = "Power";
+      submenu = [
+        { key = "s"; desc = "Sleep"; cmd = "systemctl suspend"; }
+        { key = "r"; desc = "Reboot"; cmd = "reboot"; }
+        { key = "o"; desc = "Off"; cmd = "poweroff"; }
+      ];
+    }
+  ];
+}
+
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/wlr-which-key.nix">&lt;home-manager/modules/programs/wlr-which-key.nix&gt;</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="wofi"><a href="#wofi" class="header">wofi</a></h1>
@@ -67767,8 +67999,8 @@ package</p>
 </ul>
 <h2 id="opt-services.easyeffects.extraPresets"><a class="header" href="#opt-services.easyeffects.extraPresets">services.easyeffects.extraPresets</a></h2>
 <p>List of presets to import to easyeffects.
-Presets are written to input and output folder in <code>$XDG_DATA_HOME/easyeffects</code>.
-Top level block (input/output) determines the folder the file is written to.</p>
+Presets are written to input and output folders in <code>$XDG_DATA_HOME/easyeffects</code>.
+Each top-level block (<code>input</code> or <code>output</code>) is written to its corresponding folder.</p>
 <p>See community presets at:
 https://github.com/wwmm/easyeffects/wiki/Community-Presets</p>
 <p><em>Type:</em>
@@ -67797,6 +68029,14 @@ null or (attribute set of attribute set of (JSON value))</p>
         wet = 0.0;
       };
     };
+    output = {
+      blocklist = [ ];
+      "plugins_order" = [ "limiter#0" ];
+      "limiter#0" = {
+        bypass = false;
+        threshold = -1.0;
+      };
+    };
   };
 };
 
@@ -67806,12 +68046,60 @@ null or (attribute set of attribute set of (JSON value))</p>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/easyeffects.nix">&lt;home-manager/modules/services/easyeffects.nix&gt;</a></li>
 </ul>
 <h2 id="opt-services.easyeffects.preset"><a class="header" href="#opt-services.easyeffects.preset">services.easyeffects.preset</a></h2>
-<p>Which preset to use when starting easyeffects.
-Will likely need to launch easyeffects to initially create preset.</p>
+<p>Preset to load when starting EasyEffects.</p>
+<p>A string loads every input or output preset having that name. An
+attribute set selects input and output presets independently and
+requires EasyEffects 8.0.9 or later. An empty string leaves that
+pipeline unchanged.</p>
+<p>You will likely need to launch EasyEffects to initially create presets.</p>
+<p><em>Type:</em>
+string or (submodule)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">""
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  input = "voice";
+  output = "music";
+}
+
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/easyeffects.nix">&lt;home-manager/modules/services/easyeffects.nix&gt;</a></li>
+</ul>
+<h2 id="opt-services.easyeffects.preset.input"><a class="header" href="#opt-services.easyeffects.preset.input">services.easyeffects.preset.input</a></h2>
+<p>Input preset to load when starting EasyEffects.</p>
 <p><em>Type:</em>
 string</p>
 <p><em>Default:</em></p>
 <pre><code class="language-nix">""
+</code></pre>
+<h2 id="opt-services.easyeffects.preset.output"><a class="header" href="#opt-services.easyeffects.preset.output">services.easyeffects.preset.output</a></h2>
+<p>Output preset to load when starting EasyEffects.</p>
+<p><em>Type:</em>
+string</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">""
+</code></pre>
+<h2 id="opt-services.easyeffects.settings"><a class="header" href="#opt-services.easyeffects.settings">services.easyeffects.settings</a></h2>
+<p>Global EasyEffects settings written to its mutable KConfig database.
+Settings are grouped by KConfig section. A value of <code>null</code> deletes the
+corresponding key. This option requires EasyEffects 8.0.0 or later.</p>
+<p><em>Type:</em>
+attribute set of attribute set of (null or boolean or signed integer or floating point number or string or absolute path)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  StreamInputs = {
+    inputDevice = "alsa_input.usb-example";
+    listenToMic = false;
+  };
+  StreamOutputs.useDefaultOutputDevice = true;
+}
+
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
@@ -71586,7 +71874,8 @@ boolean</p>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/lorri.nix">&lt;home-manager/modules/services/lorri.nix&gt;</a></li>
 </ul>
 <h2 id="opt-services.lorri.enableNotifications"><a class="header" href="#opt-services.lorri.enableNotifications">services.lorri.enableNotifications</a></h2>
-<p>Whether to enable lorri build notifications.</p>
+<p>Whether to enable lorri build notifications.
+Note, this is unsupported on Darwin.</p>
 <p><em>Type:</em>
 boolean</p>
 <p><em>Default:</em></p>
@@ -71605,6 +71894,17 @@ boolean</p>
 package</p>
 <p><em>Default:</em></p>
 <pre><code class="language-nix">pkgs.lorri
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/lorri.nix">&lt;home-manager/modules/services/lorri.nix&gt;</a></li>
+</ul>
+<h2 id="opt-services.lorri.extraEnvVariables"><a class="header" href="#opt-services.lorri.extraEnvVariables">services.lorri.extraEnvVariables</a></h2>
+<p>Extra environment variables to pass to the daemon.</p>
+<p><em>Type:</em>
+attribute set of string</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
@@ -73203,9 +73503,12 @@ if rocm doesn’t detect your AMD gpu</li>
 <li>
 <p><code>"cuda"</code>: supported by most modern NVIDIA GPUs</p>
 </li>
+<li>
+<p><code>"vulkan"</code>: supported by most GPUs</p>
+</li>
 </ul>
 <p><em>Type:</em>
-null or one of false, “rocm”, “cuda”</p>
+null or one of false, “rocm”, “cuda”, “vulkan”</p>
 <p><em>Default:</em></p>
 <pre><code class="language-nix">null
 </code></pre>
@@ -82511,7 +82814,7 @@ string</p>
 <p><em>Type:</em>
 boolean</p>
 <p><em>Default:</em></p>
-<pre><code class="language-nix">pkgs.stdenv.isLinux
+<pre><code class="language-nix">pkgs.stdenv.hostPlatform.isLinux
 </code></pre>
 <p><em>Example:</em></p>
 <pre><code class="language-nix">true
@@ -84453,6 +84756,19 @@ null or (list of string)</p>
 <ul>
 <li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix">&lt;home-manager/modules/programs/vdirsyncer/accounts.nix&gt;</a></li>
 </ul>
+<h2 id="opt-vdirsyncer.localReadOnly"><a class="header" href="#opt-vdirsyncer.localReadOnly">vdirsyncer.localReadOnly</a></h2>
+<p>Whether vdirsyncer should treat the local storage as read-only.</p>
+<p>Changes that cannot be written to the local storage are handled
+according to the value of the <code>partialSync</code> option.</p>
+<p><em>Type:</em>
+null or boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix">&lt;home-manager/modules/programs/vdirsyncer/accounts.nix&gt;</a></li>
+</ul>
 <h2 id="opt-vdirsyncer.metadata"><a class="header" href="#opt-vdirsyncer.metadata">vdirsyncer.metadata</a></h2>
 <p>Metadata keys that should be synchronized when vdirsyncer
 metasync is executed.</p>
@@ -85108,6 +85424,131 @@ list of string</p>
 <pre><code class="language-nix">[
   "--all"
 ]
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland">&lt;home-manager/modules/services/window-managers/hyprland&gt;</a></li>
+</ul>
+<h2 id="opt-wayland.windowManager.hyprland.xdph.settings"><a class="header" href="#opt-wayland.windowManager.hyprland.xdph.settings">wayland.windowManager.hyprland.xdph.settings</a></h2>
+<p>xdg-desktop-portal-hyprland configuration written to
+<code>$XDG_CONFIG_HOME/hypr/xdph.conf</code>.</p>
+<p>These settings require a portal package compatible with XDPH’s
+configuration format. They are generated even when
+<code>wayland.windowManager.hyprland.portalPackage</code> is <code>null</code>, so
+the portal package may be managed by NixOS.</p>
+<p><em>Type:</em>
+open submodule of attribute set of (Hyprland configuration value)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Example:</em></p>
+<pre><code class="language-nix">{
+  general = {
+    toplevel_dynamic_bind = true;
+  };
+  screencopy = {
+    allow_token_by_default = true;
+    cursor_mode = 2;
+    custom_picker_binary = "hyprland-share-picker";
+    force_shm = false;
+    max_fps = 60;
+  };
+}
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland">&lt;home-manager/modules/services/window-managers/hyprland&gt;</a></li>
+</ul>
+<h2 id="opt-wayland.windowManager.hyprland.xdph.settings.general"><a class="header" href="#opt-wayland.windowManager.hyprland.xdph.settings.general">wayland.windowManager.hyprland.xdph.settings.general</a></h2>
+<p>General XDPH settings.</p>
+<p><em>Type:</em>
+open submodule of attribute set of (Hyprland configuration value)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland">&lt;home-manager/modules/services/window-managers/hyprland&gt;</a></li>
+</ul>
+<h2 id="opt-wayland.windowManager.hyprland.xdph.settings.general.toplevel_dynamic_bind"><a class="header" href="#opt-wayland.windowManager.hyprland.xdph.settings.general.toplevel_dynamic_bind">wayland.windowManager.hyprland.xdph.settings.general.toplevel_dynamic_bind</a></h2>
+<p>Whether to bind the foreign toplevel manager dynamically
+when a screencasting session is created.</p>
+<p><em>Type:</em>
+null or boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland">&lt;home-manager/modules/services/window-managers/hyprland&gt;</a></li>
+</ul>
+<h2 id="opt-wayland.windowManager.hyprland.xdph.settings.screencopy"><a class="header" href="#opt-wayland.windowManager.hyprland.xdph.settings.screencopy">wayland.windowManager.hyprland.xdph.settings.screencopy</a></h2>
+<p>XDPH screencasting settings.</p>
+<p><em>Type:</em>
+open submodule of attribute set of (Hyprland configuration value)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">{ }
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland">&lt;home-manager/modules/services/window-managers/hyprland&gt;</a></li>
+</ul>
+<h2 id="opt-wayland.windowManager.hyprland.xdph.settings.screencopy.allow_token_by_default"><a class="header" href="#opt-wayland.windowManager.hyprland.xdph.settings.screencopy.allow_token_by_default">wayland.windowManager.hyprland.xdph.settings.screencopy.allow_token_by_default</a></h2>
+<p>Whether to enable restore tokens by default in the share
+picker.</p>
+<p><em>Type:</em>
+null or boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland">&lt;home-manager/modules/services/window-managers/hyprland&gt;</a></li>
+</ul>
+<h2 id="opt-wayland.windowManager.hyprland.xdph.settings.screencopy.cursor_mode"><a class="header" href="#opt-wayland.windowManager.hyprland.xdph.settings.screencopy.cursor_mode">wayland.windowManager.hyprland.xdph.settings.screencopy.cursor_mode</a></h2>
+<p>Default cursor mode for clients that do not specify one.
+Zero uses the protocol default, one hides the cursor, and
+two embeds it in the stream.</p>
+<p><em>Type:</em>
+null or one of 0, 1, 2</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland">&lt;home-manager/modules/services/window-managers/hyprland&gt;</a></li>
+</ul>
+<h2 id="opt-wayland.windowManager.hyprland.xdph.settings.screencopy.custom_picker_binary"><a class="header" href="#opt-wayland.windowManager.hyprland.xdph.settings.screencopy.custom_picker_binary">wayland.windowManager.hyprland.xdph.settings.screencopy.custom_picker_binary</a></h2>
+<p>Custom share picker command. The command must produce output
+compatible with <code>hyprland-share-picker</code>.</p>
+<p><em>Type:</em>
+null or string</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland">&lt;home-manager/modules/services/window-managers/hyprland&gt;</a></li>
+</ul>
+<h2 id="opt-wayland.windowManager.hyprland.xdph.settings.screencopy.force_shm"><a class="header" href="#opt-wayland.windowManager.hyprland.xdph.settings.screencopy.force_shm">wayland.windowManager.hyprland.xdph.settings.screencopy.force_shm</a></h2>
+<p>Whether to always use shared memory instead of DMA-BUF for
+screencasting.</p>
+<p><em>Type:</em>
+null or boolean</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
+</code></pre>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland">&lt;home-manager/modules/services/window-managers/hyprland&gt;</a></li>
+</ul>
+<h2 id="opt-wayland.windowManager.hyprland.xdph.settings.screencopy.max_fps"><a class="header" href="#opt-wayland.windowManager.hyprland.xdph.settings.screencopy.max_fps">wayland.windowManager.hyprland.xdph.settings.screencopy.max_fps</a></h2>
+<p>Maximum frames per second for screencasting. A value of
+zero disables the limit.</p>
+<p><em>Type:</em>
+null or (unsigned integer, meaning &gt;=0)</p>
+<p><em>Default:</em></p>
+<pre><code class="language-nix">null
 </code></pre>
 <p><em>Declared by:</em></p>
 <ul>
@@ -88544,7 +88985,7 @@ list of package</p>
 </code></pre>
 <p><em>Example:</em></p>
 <pre><code class="language-nix">[
-  &lt;derivation eog-50.1&gt;
+  &lt;derivation eog-50.2&gt;
   &lt;derivation evince-48.4&gt;
 ]
 </code></pre>
@@ -91992,7 +92433,7 @@ section is therefore not final.</p>
 <p>This release has the following notable changes:</p>
 <ul>
 <li>
-<p>The <a href="#opt-programs.uv.enable">programs.uv.enable</a> module can now install uv-managed Python
+<p>The <a href="#uv">programs.uv</a> module can now install uv-managed Python
 versions and tools through the new <code>programs.uv.python.versions</code>,
 <code>programs.uv.python.default</code>, and <code>programs.uv.tool.packages</code> options. Unpinned
 entries track the latest release on each activation while pinned ones stay put,
@@ -92060,7 +92501,7 @@ systems where home directories are mounted later (for example, pam_mount).</p>
 machine management on Darwin.</p>
 </li>
 <li>
-<p>The <a href="#opt-programs.rclone.enable">programs.rclone.enable</a> module now supports launchd-backed config,
+<p>The <a href="#rclone">programs.rclone</a> module now supports launchd-backed config,
 mount, and serve agents on Darwin. The new
 <code>programs.rclone.remotes.&lt;name&gt;.serve</code> option can manage <code>rclone serve</code>
 sidecar services on both Linux and Darwin. On non-systemd platforms,
